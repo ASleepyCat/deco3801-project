@@ -18,7 +18,7 @@ jobs:
         projectPath:
           - Game
         unityVersion:
-          - 2019.3.8f1
+          - 2019.2.11f1
     steps:
       # Checkout
       - name: Checkout repository
@@ -39,7 +39,6 @@ jobs:
         uses: webbertakken/unity-test-runner@v1.6
         id: tests
         with:
-          artifactsPath: artifacts
           projectPath: ${{ matrix.projectPath }}
           unityVersion: ${{ matrix.unityVersion }}
 

@@ -16,9 +16,9 @@ jobs:
       fail-fast: false
       matrix:
         projectPath:
-            - Game
-          unityVersion:
-            - 2020.1.2f1
+          - Game
+        unityVersion:
+          - 2020.1.2f1
     steps:
       # Checkout
       - name: Checkout repository

@@ -1,0 +1,90 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &1
+MonoBehaviour:
+  m_ObjectHideFlags: 61
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -530159753, guid: 68c7e4565cde54155bb78d8e935f1ddb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cacheType: 3
+  lastUpdatedAtString: 2020-08-24T18:17:39.117+10:00
+  initializedAtString: 2020-08-24T18:17:39.117+10:00
+  log:
+  - commitID: b282813243fa20d80a1f3707636b530f8d157430
+    mergeA: 
+    mergeB: 
+    authorName: ASleepyCat
+    authorEmail: dyeom340@gmail.com
+    commitEmail: dyeom340@gmail.com
+    commitName: ASleepyCat
+    summary: Add GitHub Actions CI
+    description: 
+    timeString: 2020-08-24T17:38:42.000+10:00
+    commitTimeString: 2020-08-24T17:38:42.000+10:00
+    changes:
+    - path: .github\workflows\activation.yml
+      fullPath: D:\Git\deco3801-project\.github\workflows\activation.yml
+      projectPath: ..\.github\workflows\activation.yml
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: .github\workflows\main.yml
+      fullPath: D:\Git\deco3801-project\.github\workflows\main.yml
+      projectPath: ..\.github\workflows\main.yml
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+  - commitID: f98849587b831ee87ddf363baf2d43ed241266fb
+    mergeA: 
+    mergeB: 
+    authorName: ASleepyCat
+    authorEmail: dyeom340@gmail.com
+    commitEmail: dyeom340@gmail.com
+    commitName: ASleepyCat
+    summary: Add Unity activation workflow
+    description: 
+    timeString: 2020-08-24T17:15:16.000+10:00
+    commitTimeString: 2020-08-24T17:15:16.000+10:00
+    changes:
+    - path: .github\workflows\activation.yml
+      fullPath: D:\Git\deco3801-project\.github\workflows\activation.yml
+      projectPath: ..\.github\workflows\activation.yml
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+  - commitID: 9ab2c636136c283dcfaffe696669c6d5fdfdb66e
+    mergeA: 
+    mergeB: 
+    authorName: ASleepyCat
+    authorEmail: dyeom340@gmail.com
+    commitEmail: noreply@github.com
+    commitName: GitHub
+    summary: Initial commit
+    description: 
+    timeString: 2020-08-18T20:16:16.000+10:00
+    commitTimeString: 2020-08-18T20:16:16.000+10:00
+    changes:
+    - path: .gitignore
+      fullPath: D:\Git\deco3801-project\.gitignore
+      projectPath: ..\.gitignore
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: LICENSE
+      fullPath: D:\Git\deco3801-project\LICENSE
+      projectPath: ..\LICENSE
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: README.md
+      fullPath: D:\Git\deco3801-project\README.md
+      projectPath: ..\README.md
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0

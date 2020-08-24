@@ -10,11 +10,13 @@ env:
 
 jobs:
   test:
-    name: Test in ${{ matrix.testMode }} on version ${{ matrix.unityVersion }}
+    name: Test in all modes on version ${{ matrix.unityVersion }}
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
       matrix:
+      projectPath:
+          - Game
         unityVersion:
           - 2020.1.2f1
     steps:
@@ -27,8 +29,8 @@ jobs:
       # Cache
       - uses: actions/cache@v2.1.1
         with:
-          path: Library
-          key: Library-
+          path: ${{ matrix.projectPath }}/Library
+          key: Library-${{ matrix.projectPath }}
           restore-keys: |
             Library-
 
@@ -38,6 +40,7 @@ jobs:
         id: tests
         with:
           artifactsPath: artifacts
+          projectPath: ${{ matrix.projectPath }}
           unityVersion: ${{ matrix.unityVersion }}
 
       # Upload test results

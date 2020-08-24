@@ -15,10 +15,10 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-      projectPath:
-          - Game
-        unityVersion:
-          - 2020.1.2f1
+        projectPath:
+            - Game
+          unityVersion:
+            - 2020.1.2f1
     steps:
       # Checkout
       - name: Checkout repository

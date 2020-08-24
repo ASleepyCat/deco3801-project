@@ -14,9 +14,6 @@
 [Ll]ocal[Cc]ache/
 [Uu]nityGenerated/
 
-# Unity3D generated meta files
-*.pidb.meta
-
 # Asset meta data should only be ignored when the corresponding asset is also ignored
 ![Aa]ssets/**/*.meta
 
@@ -46,7 +43,6 @@
 *.booproj
 *.svd
 *.pdb
-*.pidb
 *.mdb
 *.opendb
 *.VC.db
@@ -66,9 +62,7 @@ sysinfo.txt
 # Crashlytics generated file
 crashlytics-build.properties
 
-###
 # OS generated
-###
 .DS_Store
 .DS_Store?
 ._*

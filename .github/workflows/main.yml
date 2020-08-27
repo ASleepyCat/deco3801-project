@@ -10,7 +10,7 @@ env:
 
 jobs:
   test:
-    name: Test in all modes on version ${{ matrix.unityVersion }}
+    name: Test in ${{ matrix.testMode }} on version ${{ matrix.unityVersion }}
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
@@ -19,6 +19,8 @@ jobs:
           - Game
         unityVersion:
           - 2020.1.2f1
+        testMode:
+          - playmode
     steps:
       # Checkout
       - name: Checkout repository
@@ -42,9 +44,10 @@ jobs:
           customParameters: '-nographics' # Workaround
           projectPath: ${{ matrix.projectPath }}
           unityVersion: ${{ matrix.unityVersion }}
+          testMode: ${{ matrix.testMode }}
 
       # Upload test results
       - uses: actions/upload-artifact@v2
         with:
-          name: Test results
+          name: Test results for ${{ matrix.testMode }}
           path: ${{ steps.tests.outputs.artifactsPath }}

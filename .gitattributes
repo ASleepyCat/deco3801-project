@@ -1,49 +1,121 @@
-# 3D models
-*.3dm filter=lfs diff=lfs merge=lfs -text
-*.3ds filter=lfs diff=lfs merge=lfs -text
-*.blend filter=lfs diff=lfs merge=lfs -text
-*.c4d filter=lfs diff=lfs merge=lfs -text
-*.collada filter=lfs diff=lfs merge=lfs -text
-*.dae filter=lfs diff=lfs merge=lfs -text
-*.dxf filter=lfs diff=lfs merge=lfs -text
-*.fbx filter=lfs diff=lfs merge=lfs -text
-*.jas filter=lfs diff=lfs merge=lfs -text
-*.lws filter=lfs diff=lfs merge=lfs -text
-*.lxo filter=lfs diff=lfs merge=lfs -text
-*.ma filter=lfs diff=lfs merge=lfs -text
-*.max filter=lfs diff=lfs merge=lfs -text
-*.mb filter=lfs diff=lfs merge=lfs -text
-*.obj filter=lfs diff=lfs merge=lfs -text
-*.ply filter=lfs diff=lfs merge=lfs -text
-*.skp filter=lfs diff=lfs merge=lfs -text
-*.stl filter=lfs diff=lfs merge=lfs -text
-*.ztl filter=lfs diff=lfs merge=lfs -text
-# Audio
-*.aif filter=lfs diff=lfs merge=lfs -text
-*.aiff filter=lfs diff=lfs merge=lfs -text
-*.it filter=lfs diff=lfs merge=lfs -text
-*.mod filter=lfs diff=lfs merge=lfs -text
-*.mp3 filter=lfs diff=lfs merge=lfs -text
-*.ogg filter=lfs diff=lfs merge=lfs -text
-*.s3m filter=lfs diff=lfs merge=lfs -text
-*.wav filter=lfs diff=lfs merge=lfs -text
-*.xm filter=lfs diff=lfs merge=lfs -text
-# Fonts
-*.otf filter=lfs diff=lfs merge=lfs -text
-*.ttf filter=lfs diff=lfs merge=lfs -text
-# Images
-*.bmp filter=lfs diff=lfs merge=lfs -text
-*.exr filter=lfs diff=lfs merge=lfs -text
-*.gif filter=lfs diff=lfs merge=lfs -text
-*.hdr filter=lfs diff=lfs merge=lfs -text
-*.iff filter=lfs diff=lfs merge=lfs -text
-*.jpeg filter=lfs diff=lfs merge=lfs -text
-*.jpg filter=lfs diff=lfs merge=lfs -text
-*.pict filter=lfs diff=lfs merge=lfs -text
-*.png filter=lfs diff=lfs merge=lfs -text
-*.psd filter=lfs diff=lfs merge=lfs -text
-*.tga filter=lfs diff=lfs merge=lfs -text
-*.tif filter=lfs diff=lfs merge=lfs -text
-*.tiff filter=lfs diff=lfs merge=lfs -text
+# Unity
+*.cginc              text
+*.cs                 text diff=csharp
+*.shader             text
 
-ArtifactDB filter=lfs diff=lfs merge=lfs -text
+# Unity YAML
+*.mat                merge=unityyamlmerge eol=lf
+*.anim               merge=unityyamlmerge eol=lf
+*.unity              merge=unityyamlmerge eol=lf
+*.prefab             merge=unityyamlmerge eol=lf
+*.asset              merge=unityyamlmerge eol=lf
+*.meta               merge=unityyamlmerge eol=lf
+*.controller         merge=unityyamlmerge eol=lf
+
+# "physic" for 3D but "physics" for 2D
+*.physicMaterial2D   merge=unityyamlmerge eol=lf
+*.physicMaterial     merge=unityyamlmerge eol=lf
+*.physicsMaterial2D  merge=unityyamlmerge eol=lf
+*.physicsMaterial    merge=unityyamlmerge eol=lf
+
+# Using Git LFS
+# Add diff=lfs merge=lfs to the binary files
+
+# Unity LFS
+*.cubemap            binary diff=lfs merge=lfs
+*.unitypackage       binary diff=lfs merge=lfs
+
+# 3D models
+*.3dm                binary diff=lfs merge=lfs
+*.3ds                binary diff=lfs merge=lfs
+*.blend              binary diff=lfs merge=lfs
+*.c4d                binary diff=lfs merge=lfs
+*.collada            binary diff=lfs merge=lfs
+*.dae                binary diff=lfs merge=lfs
+*.dxf                binary diff=lfs merge=lfs
+*.FBX                binary diff=lfs merge=lfs
+*.fbx                binary diff=lfs merge=lfs
+*.jas                binary diff=lfs merge=lfs
+*.lws                binary diff=lfs merge=lfs
+*.lxo                binary diff=lfs merge=lfs
+*.ma                 binary diff=lfs merge=lfs
+*.max                binary diff=lfs merge=lfs
+*.mb                 binary diff=lfs merge=lfs
+*.obj                binary diff=lfs merge=lfs
+*.ply                binary diff=lfs merge=lfs
+*.skp                binary diff=lfs merge=lfs
+*.stl                binary diff=lfs merge=lfs
+*.ztl                binary diff=lfs merge=lfs
+
+# Audio
+*.aif                binary diff=lfs merge=lfs
+*.aiff               binary diff=lfs merge=lfs
+*.it                 binary diff=lfs merge=lfs
+*.mod                binary diff=lfs merge=lfs
+*.mp3                binary diff=lfs merge=lfs
+*.ogg                binary diff=lfs merge=lfs
+*.s3m                binary diff=lfs merge=lfs
+*.wav                binary diff=lfs merge=lfs
+*.xm                 binary diff=lfs merge=lfs
+
+# Video
+*.asf                binary diff=lfs merge=lfs
+*.avi                binary diff=lfs merge=lfs
+*.flv                binary diff=lfs merge=lfs
+*.mov                binary diff=lfs merge=lfs
+*.mp4                binary diff=lfs merge=lfs
+*.mpeg               binary diff=lfs merge=lfs
+*.mpg                binary diff=lfs merge=lfs
+*.ogv                binary diff=lfs merge=lfs
+*.wmv                binary diff=lfs merge=lfs
+
+# Images
+*.bmp                binary diff=lfs merge=lfs
+*.exr                binary diff=lfs merge=lfs
+*.gif                binary diff=lfs merge=lfs
+*.hdr                binary diff=lfs merge=lfs
+*.iff                binary diff=lfs merge=lfs
+*.jpeg               binary diff=lfs merge=lfs
+*.jpg                binary diff=lfs merge=lfs
+*.pict               binary diff=lfs merge=lfs
+*.png                binary diff=lfs merge=lfs
+*.psd                binary diff=lfs merge=lfs
+*.tga                binary diff=lfs merge=lfs
+*.tif                binary diff=lfs merge=lfs
+*.tiff               binary diff=lfs merge=lfs
+
+# Compressed Archive
+*.7z                binary diff=lfs merge=lfs
+*.bz2               binary diff=lfs merge=lfs
+*.gz                binary diff=lfs merge=lfs
+*.rar               binary diff=lfs merge=lfs
+*.tar               binary diff=lfs merge=lfs
+*.zip               binary diff=lfs merge=lfs
+
+# Compiled Dynamic Library
+*.dll               binary diff=lfs merge=lfs
+*.pdb               binary diff=lfs merge=lfs
+*.so                binary diff=lfs merge=lfs
+
+# Fonts
+*.otf               binary diff=lfs merge=lfs
+*.ttf               binary diff=lfs merge=lfs
+
+# Executable/Installer
+*.apk               binary diff=lfs merge=lfs
+*.exe               binary diff=lfs merge=lfs
+
+# Documents
+*.pdf               binary diff=lfs merge=lfs
+
+# ETC
+*.a                 binary diff=lfs merge=lfs
+*.rns               binary diff=lfs merge=lfs
+*.reason            binary diff=lfs merge=lfs
+
+# Collapse Unity-generated files on GitHub
+*.asset             linguist-generated
+*.mat               linguist-generated
+*.meta              linguist-generated
+*.prefab            linguist-generated
+*.unity             linguist-generated

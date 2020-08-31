@@ -1,5 +1,10 @@
-﻿public class NpcScript : InteractableScript
+﻿using UnityEngine;
+
+public class NpcScript : InteractableScript
 {
+    // Pseudo-code for potential dialogue event trigger implementation
+    // public DialogueSystem dialogue;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -10,5 +15,11 @@
     void Update()
     {
         
+    }
+
+    protected override void InvokeEvent()
+    {
+        // dialogue.start();
+        throw new System.NotImplementedException();
     }
 }

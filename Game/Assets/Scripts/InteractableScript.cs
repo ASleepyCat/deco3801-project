@@ -8,8 +8,11 @@ public abstract class InteractableScript : MonoBehaviour
     private void OnTriggerStay(Collider other)
     {
         if (other.CompareTag("Player") && Input.GetKeyDown(KeyCode.E))
-        {
-            // Interact with NPC/object
-        }
+            InvokeEvent();
     }
+
+    // This handles NPC/pbject specific actions i.e. dialogue.
+    // For NPCs, this could initiate the dialogue system.
+    // For objects, this could initiate a loading sequence (doors, entrances).
+    protected abstract void InvokeEvent();
 }

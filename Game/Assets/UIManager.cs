@@ -8,8 +8,11 @@ public class UIManager : MonoBehaviour
 {
     public GameObject container_NPC;
     public GameObject container_PLAYER;
-    public Text text_NPC;
+    public Text NPC_Text;
     public Text[] text_Choices;
+    bool animatingText = false;
+
+    IEnumerator NPC_TextAnimator;
 
     // Start is called before the first frame update
     void Start()
@@ -62,7 +65,9 @@ public class UIManager : MonoBehaviour
         } else
         {
             container_NPC.SetActive(true);
-            text_NPC.text = data.comments[data.commentIndex];
+            //This coroutine animates the NPC text instead of displaying it all at once
+            NPC_TextAnimator = DrawText(data.comments[data.commentIndex], 0.02f);
+            StartCoroutine(NPC_TextAnimator);
         }
     }
 
@@ -88,5 +93,35 @@ public class UIManager : MonoBehaviour
         VD.nodeData.commentIndex = choice;
         if (Input.GetMouseButtonUp(0))
             VD.Next();
+    }
+
+    IEnumerator DrawText(string text, float time)
+    {
+        animatingText = true;
+
+        string[] words = text.Split(' ');
+
+        for (int i = 0; i < words.Length; i++)
+        {
+            string word = words[i];
+            if (i != words.Length - 1) word += " ";
+
+            string previousText = NPC_Text.text;
+
+            float lastHeight = NPC_Text.preferredHeight;
+            NPC_Text.text += word;
+            if (NPC_Text.preferredHeight > lastHeight)
+            {
+                previousText += System.Environment.NewLine;
+            }
+
+            for (int j = 0; j < word.Length; j++)
+            {
+                NPC_Text.text = previousText + word.Substring(0, j + 1);
+                yield return new WaitForSeconds(time);
+            }
+        }
+        NPC_Text.text = text;
+        animatingText = false;
     }
 }

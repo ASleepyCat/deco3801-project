@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 206235346}
   - component: {fileID: 206235348}
   - component: {fileID: 206235347}
+  - component: {fileID: 206235349}
   m_Layer: 0
   m_Name: Tilemap_window
   m_TagString: Untagged
@@ -234,7 +235,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 0
-      m_TileSpriteIndex: 2
+      m_TileSpriteIndex: 3
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -639,10 +640,10 @@ Tilemap:
     m_Data: {fileID: 8012334520054420636, guid: 39c09fd1038664a478c648c1e3483340, type: 3}
   - m_RefCount: 4
     m_Data: {fileID: -5365424794292753554, guid: 39c09fd1038664a478c648c1e3483340, type: 3}
-  - m_RefCount: 1
-    m_Data: {fileID: 7313573538102637039, guid: 39c09fd1038664a478c648c1e3483340, type: 3}
   - m_RefCount: 0
     m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: 7313573538102637039, guid: 39c09fd1038664a478c648c1e3483340, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: -9157777296274767982, guid: 39c09fd1038664a478c648c1e3483340, type: 3}
   - m_RefCount: 1
@@ -723,6 +724,32 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!61 &206235349
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 206235345}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.5, y: 2}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 17, y: 6}
+  m_EdgeRadius: 0
 --- !u!1 &480066347
 GameObject:
   m_ObjectHideFlags: 0
@@ -959,6 +986,7 @@ GameObject:
   - component: {fileID: 804326537}
   - component: {fileID: 804326539}
   - component: {fileID: 804326538}
+  - component: {fileID: 804326540}
   m_Layer: 0
   m_Name: Tilemap_studytable
   m_TagString: Untagged
@@ -1167,6 +1195,32 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!61 &804326540
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 804326536}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -3, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 12, y: 6}
+  m_EdgeRadius: 0
 --- !u!1 &825655070
 GameObject:
   m_ObjectHideFlags: 0
@@ -3198,6 +3252,7 @@ GameObject:
   - component: {fileID: 1892251616}
   - component: {fileID: 1892251618}
   - component: {fileID: 1892251617}
+  - component: {fileID: 1892251619}
   m_Layer: 0
   m_Name: Tilemap
   m_TagString: Untagged
@@ -3509,6 +3564,32 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!61 &1892251619
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1892251615}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -1.5, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 15, y: 10}
+  m_EdgeRadius: 0
 --- !u!1 &1920835138
 GameObject:
   m_ObjectHideFlags: 0

@@ -1197,6 +1197,7 @@ MonoBehaviour:
   - MrCube
   - NPCOnly
   - QuestChartDemo
+  - Scripting_Tutorial
   - TriggeredDude
   - Witch
   assignedIndex: 2
@@ -2789,9 +2790,10 @@ MonoBehaviour:
   - MrCube
   - NPCOnly
   - QuestChartDemo
+  - Scripting_Tutorial
   - TriggeredDude
   - Witch
-  assignedIndex: 13
+  assignedIndex: 14
   assignedID: 60771
   assignedDialogue: Witch
   interactionCount: 0
@@ -2929,6 +2931,7 @@ MonoBehaviour:
   - MrCube
   - NPCOnly
   - QuestChartDemo
+  - Scripting_Tutorial
   - TriggeredDude
   - Witch
   assignedIndex: 10
@@ -3069,6 +3072,7 @@ MonoBehaviour:
   - MrCube
   - NPCOnly
   - QuestChartDemo
+  - Scripting_Tutorial
   - TriggeredDude
   - Witch
   assignedIndex: 10
@@ -3254,6 +3258,7 @@ MonoBehaviour:
   - MrCube
   - NPCOnly
   - QuestChartDemo
+  - Scripting_Tutorial
   - TriggeredDude
   - Witch
   assignedIndex: 9
@@ -3532,6 +3537,7 @@ MonoBehaviour:
   - MrCube
   - NPCOnly
   - QuestChartDemo
+  - Scripting_Tutorial
   - TriggeredDude
   - Witch
   assignedIndex: 3
@@ -4479,6 +4485,7 @@ MonoBehaviour:
   - MrCube
   - NPCOnly
   - QuestChartDemo
+  - Scripting_Tutorial
   - TriggeredDude
   - Witch
   assignedIndex: 1
@@ -4700,6 +4707,7 @@ MonoBehaviour:
   - MrCube
   - NPCOnly
   - QuestChartDemo
+  - Scripting_Tutorial
   - TriggeredDude
   - Witch
   assignedIndex: 0
@@ -4901,6 +4909,7 @@ MonoBehaviour:
   - MrCube
   - NPCOnly
   - QuestChartDemo
+  - Scripting_Tutorial
   - TriggeredDude
   - Witch
   assignedIndex: 8
@@ -5592,6 +5601,7 @@ MonoBehaviour:
   - MrCube
   - NPCOnly
   - QuestChartDemo
+  - Scripting_Tutorial
   - TriggeredDude
   - Witch
   assignedIndex: 7

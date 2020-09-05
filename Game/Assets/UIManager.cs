@@ -35,10 +35,6 @@ public class UIManager : MonoBehaviour
         {
             Begin(dialogue);
         }
-        else
-        {
-            CallNext();
-        }
     }
 
     // Update is called once per frame
@@ -48,7 +44,7 @@ public class UIManager : MonoBehaviour
         {
             if (!VD.isActive)
             {
-                Begin();
+                Begin(GetComponent<VIDE_Assign>());
             }
             else {
                 VD.Next();
@@ -155,7 +151,7 @@ public class UIManager : MonoBehaviour
             {
                 npcText.text = previousText + word.Substring(0, j + 1);
                 yield return new WaitForSeconds(time);
-            }
+            }   
         }
         npcText.text = text;
         animatingText = false;

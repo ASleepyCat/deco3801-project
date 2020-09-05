@@ -11,6 +11,8 @@ public class UIManager : MonoBehaviour
     public GameObject containerNPC;
     public GameObject containerPlayer;
     public Text npcText;
+    public Text npcLabel;
+    public Text playerLabel;
     public Text[] textChoices;
     bool animatingText = false;
 
@@ -22,6 +24,21 @@ public class UIManager : MonoBehaviour
         containerNPC.SetActive(false);
         containerPlayer.SetActive(false);
         dialogueContainer.SetActive(false);
+    }
+
+    //This begins the dialogue and progresses through it (Called by VIDEDemoPlayer.cs)
+    public void Interact(VIDE_Assign dialogue)
+    {
+   
+
+        if (!VD.isActive)
+        {
+            Begin(dialogue);
+        }
+        else
+        {
+            CallNext();
+        }
     }
 
     // Update is called once per frame
@@ -40,12 +57,17 @@ public class UIManager : MonoBehaviour
     }
 
     // Begins the dialogue sequence
-    void Begin()
+    void Begin(VIDE_Assign dialogue)
     {
+        //Reset the NPC text variables
+        npcText.text = "";
+        npcLabel.text = "";
+        playerLabel.text = "";
+
         // Subscribes the UpdateUI and End methods to the OnNodeChange and OnEnd events respectively 
         VD.OnNodeChange += UpdateUI;
         VD.OnEnd += End;
-        VD.BeginDialogue(GetComponent<VIDE_Assign>());
+        VD.BeginDialogue(dialogue);
     }
 
     void UpdateUI(VD.NodeData data)

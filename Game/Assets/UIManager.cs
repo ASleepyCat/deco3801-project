@@ -6,10 +6,10 @@ using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
-    public GameObject container_NPC;
-    public GameObject container_PLAYER;
-    public Text NPC_Text;
-    public Text[] text_Choices;
+    public GameObject containerNPC;
+    public GameObject containerPlayer;
+    public Text npcText;
+    public Text[] textChoices;
     bool animatingText = false;
 
     IEnumerator NPC_TextAnimator;
@@ -17,8 +17,8 @@ public class UIManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        container_NPC.SetActive(false);
-        container_PLAYER.SetActive(false);
+        containerNPC.SetActive(false);
+        containerPlayer.SetActive(false);
     }
 
     // Update is called once per frame
@@ -29,15 +29,17 @@ public class UIManager : MonoBehaviour
             if (!VD.isActive)
             {
                 Begin();
-            } else
-            {
+            }
+            else {
                 VD.Next();
             }
         }
     }
 
+    // Begins the dialogue sequence
     void Begin()
     {
+        // Subscribes the UpdateUI and End methods to the OnNodeChange and OnEnd events respectively 
         VD.OnNodeChange += UpdateUI;
         VD.OnEnd += End;
         VD.BeginDialogue(GetComponent<VIDE_Assign>());
@@ -45,26 +47,31 @@ public class UIManager : MonoBehaviour
 
     void UpdateUI(VD.NodeData data)
     {
-        container_NPC.SetActive(false);
-        container_PLAYER.SetActive(false);
+        // Hides the dialogue containers on screen
+        containerNPC.SetActive(false);
+        containerPlayer.SetActive(false);
+
         if (data.isPlayer)
         {
-            container_PLAYER.SetActive(true);
-            for (int i = 0; i < text_Choices.Length; i++)
+            containerPlayer.SetActive(true);
+            for (int i = 0; i < textChoices.Length; i++)
             {
+                // Only displays the number of buttons need for the comments and hides the rest
                 if (i < data.comments.Length)
                 {
-                    text_Choices[i].transform.parent.gameObject.SetActive(true);
-                    text_Choices[i].text = data.comments[i];
+                    // Displays the parent button and updates the text
+                    textChoices[i].transform.parent.gameObject.SetActive(true);
+                    textChoices[i].text = data.comments[i];
                 } else
                 {
-                    text_Choices[i].transform.parent.gameObject.SetActive(false);
+                    textChoices[i].transform.parent.gameObject.SetActive(false);
                 }
             }
             
         } else
         {
-            container_NPC.SetActive(true);
+            containerNPC.SetActive(true);
+
             //This coroutine animates the NPC text instead of displaying it all at once
             NPC_TextAnimator = DrawText(data.comments[data.commentIndex], 0.02f);
             StartCoroutine(NPC_TextAnimator);
@@ -73,8 +80,9 @@ public class UIManager : MonoBehaviour
 
     void End(VD.NodeData data)
     {
-        container_PLAYER.SetActive(false);
-        container_NPC.SetActive(false);
+        // Once the dialogue has ended hide the dialogue box and unsubscribe the functions
+        containerPlayer.SetActive(false);
+        containerNPC.SetActive(false);
         VD.OnNodeChange -= UpdateUI;
         VD.OnEnd -= End;
         VD.EndDialogue();
@@ -82,7 +90,7 @@ public class UIManager : MonoBehaviour
 
     void OnDisable()
     {
-        if (container_NPC !=  null)
+        if (containerNPC !=  null)
         {
             End(null);
         }
@@ -90,6 +98,7 @@ public class UIManager : MonoBehaviour
 
     public void SetPlayerChoice(int choice)
     {
+        // This is added as onClick function to the dialogue buttons
         VD.nodeData.commentIndex = choice;
         if (Input.GetMouseButtonUp(0))
             VD.Next();
@@ -101,27 +110,28 @@ public class UIManager : MonoBehaviour
 
         string[] words = text.Split(' ');
 
+        // This loop prints out the letters in a comment one by one rather than all at once
         for (int i = 0; i < words.Length; i++)
         {
             string word = words[i];
             if (i != words.Length - 1) word += " ";
 
-            string previousText = NPC_Text.text;
+            string previousText = npcText.text;
 
-            float lastHeight = NPC_Text.preferredHeight;
-            NPC_Text.text += word;
-            if (NPC_Text.preferredHeight > lastHeight)
+            float lastHeight = npcText.preferredHeight;
+            npcText.text += word;
+            if (npcText.preferredHeight > lastHeight)
             {
                 previousText += System.Environment.NewLine;
             }
 
             for (int j = 0; j < word.Length; j++)
             {
-                NPC_Text.text = previousText + word.Substring(0, j + 1);
+                npcText.text = previousText + word.Substring(0, j + 1);
                 yield return new WaitForSeconds(time);
             }
         }
-        NPC_Text.text = text;
+        npcText.text = text;
         animatingText = false;
     }
 }

@@ -201,7 +201,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Player Choice 2
+  m_Text: 
 --- !u!1 &214580512
 GameObject:
   m_ObjectHideFlags: 0
@@ -594,7 +594,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Player Choice 1
+  m_Text: 
 --- !u!1 &945014109
 GameObject:
   m_ObjectHideFlags: 0
@@ -723,9 +723,9 @@ MonoBehaviour:
   - ThroneRoom
   - TriggeredDude
   - Witch
-  assignedIndex: 9
-  assignedID: 97947
-  assignedDialogue: Leve1_Lietenant
+  assignedIndex: 11
+  assignedID: 37879
+  assignedDialogue: Level1_Council
   interactionCount: 0
   alias: 
   overrideStartNode: -1
@@ -748,16 +748,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 953355061}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ff44ceed8892fb4693938102308a421, type: 3}
+  m_Script: {fileID: 11500000, guid: 686376a980a576743b226eefa259229b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  container_NPC: {fileID: 1732548974}
-  container_PLAYER: {fileID: 1726203418}
-  NPC_Text: {fileID: 1243783585}
-  text_Choices:
-  - {fileID: 909081239}
-  - {fileID: 193250702}
-  - {fileID: 1559018850}
+  dialogueContainer: {fileID: 2037370408}
+  containerNPC: {fileID: 1732548974}
+  containerPlayer: {fileID: 1726203418}
+  npcText: {fileID: 1243783585}
+  textChoices: []
 --- !u!4 &953355064
 Transform:
   m_ObjectHideFlags: 0
@@ -991,7 +989,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: NPC Text
+  m_Text: 
 --- !u!1 &1323176151
 GameObject:
   m_ObjectHideFlags: 0
@@ -1122,7 +1120,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Player Choice 3
+  m_Text: 
 --- !u!222 &1559018851
 CanvasRenderer:
   m_ObjectHideFlags: 0

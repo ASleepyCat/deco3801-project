@@ -6,6 +6,8 @@ using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
+
+    public GameObject dialogueContainer;
     public GameObject containerNPC;
     public GameObject containerPlayer;
     public Text npcText;
@@ -19,6 +21,7 @@ public class UIManager : MonoBehaviour
     {
         containerNPC.SetActive(false);
         containerPlayer.SetActive(false);
+        dialogueContainer.SetActive(false);
     }
 
     // Update is called once per frame
@@ -50,6 +53,7 @@ public class UIManager : MonoBehaviour
         // Hides the dialogue containers on screen
         containerNPC.SetActive(false);
         containerPlayer.SetActive(false);
+        dialogueContainer.SetActive(true);
 
         if (data.isPlayer)
         {

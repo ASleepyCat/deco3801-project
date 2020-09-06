@@ -12,6 +12,7 @@ namespace Tests.MonoBehaviours
         {
             var inventory = new Inventory();
             var item = ScriptableObject.CreateInstance<Item>();
+            var addedItem = true; // Need to assign else Unity throws an error
             
             Assert.AreEqual(inventory.ItemIndex, 0);
             
@@ -20,8 +21,8 @@ namespace Tests.MonoBehaviours
 
             // Check if item adding limit works
             for (var i = 0; i < Inventory.NumItemSlots + 1; ++i)
-                inventory.AddItem(item);
-            Assert.AreEqual(inventory.ItemIndex, Inventory.NumItemSlots);
+                addedItem = inventory.AddItem(item);
+            Assert.True(!addedItem);
         }
     }
 }

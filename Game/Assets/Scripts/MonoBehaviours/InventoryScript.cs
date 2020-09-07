@@ -4,7 +4,6 @@ using UnityEngine.UI;
 
 namespace MonoBehaviours
 {
-    // Wrapper class for Inventory
     public class InventoryScript : MonoBehaviour
     {
         public const int NumItemSlots = 10;

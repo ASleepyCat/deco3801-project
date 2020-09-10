@@ -20,8 +20,8 @@ namespace MonoBehaviours
         {
             if (ItemIndex >= NumItemSlots) return false;
             items[ItemIndex] = itemToAdd;
-            items[ItemIndex].sprite = itemToAdd.sprite;
-            items[ItemIndex].description = itemToAdd.description;
+            itemImages[ItemIndex].sprite = itemToAdd.sprite;
+            itemImages[ItemIndex].enabled = true;
             ++ItemIndex;
             return true;
         }

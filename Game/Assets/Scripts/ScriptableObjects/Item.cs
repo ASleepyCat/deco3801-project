@@ -7,5 +7,6 @@ namespace ScriptableObjects
     {
         public Sprite sprite;
         public string description;
+        public new string name;
     }
 }

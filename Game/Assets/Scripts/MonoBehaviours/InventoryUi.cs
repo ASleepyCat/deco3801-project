@@ -16,10 +16,10 @@ namespace MonoBehaviours
         
         private void Start()
         {
-            _inventory = Inventory.Instance;
-            _inventory.ONItemAddedCallback = UpdateUi;
+            _inventory = Inventory.instance;
+            _inventory.onItemAddedCallback = UpdateUi;
             _slots = itemsParent.GetComponentsInChildren<InventorySlot>();
-            _playerManager = PlayerManager.Instance;
+            _playerManager = PlayerManager.instance;
         }
 
         private void Update()

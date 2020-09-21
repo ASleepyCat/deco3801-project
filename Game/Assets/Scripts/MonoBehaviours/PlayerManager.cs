@@ -5,17 +5,17 @@ namespace MonoBehaviours
 {
     public class PlayerManager : MonoBehaviour
     {
-        public static PlayerManager Instance;
+        public static PlayerManager instance;
         public PlayerState PlayerState { get; private set; }
 
         private void Awake()
         {
-            if (Instance != null)
+            if (instance != null)
             {
                 Debug.LogWarning("More than one instance of " + GetType().Name + " found!");
                 return;
             }
-            Instance = this;
+            instance = this;
             PlayerState = ScriptableObject.CreateInstance<PlayerState>();
         }
     }

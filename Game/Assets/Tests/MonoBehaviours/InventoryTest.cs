@@ -10,7 +10,7 @@ namespace Tests.MonoBehaviours
         [TearDown]
         public void CleanUp()
         {
-            Inventory.Instance = null;
+            Inventory.instance = null;
         }
         
         [Test]

@@ -20,9 +20,9 @@ namespace MonoBehaviours
         {
             Debug.Log("interact");
             // Return if player is already busy
-            if (!PlayerManager.Instance.PlayerState.SetPlayerState(PlayerState.States.InDialogue)) return;
-            Inventory.Instance.AddItem(item); // TODO: Change this to start dialogue
-            PlayerManager.Instance.PlayerState.SetPlayerState(PlayerState.States.Free);
+            if (!PlayerManager.instance.PlayerState.SetPlayerState(PlayerState.States.InDialogue)) return;
+            Inventory.instance.AddItem(item); // TODO: Change this to start dialogue
+            PlayerManager.instance.PlayerState.SetPlayerState(PlayerState.States.Free);
         }
     }
 }

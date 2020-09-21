@@ -17,7 +17,7 @@ namespace MonoBehaviours
 
         private void Awake()
         {
-            _manager = PlayerManager.Instance;
+            _manager = PlayerManager.instance;
         }
 
         // Update is called once per frame

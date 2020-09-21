@@ -11,7 +11,7 @@ namespace ScriptableObjects
         public States State { get; private set; }
 
         /// <summary>
-        /// Sets the player's state.
+        /// Sets the player's state. This might be an incomplete implementation if collision trigger checks are ran in parallel.
         /// </summary>
         /// <param name="newState"></param>
         /// <returns>

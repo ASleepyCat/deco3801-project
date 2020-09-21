@@ -137,9 +137,10 @@ GameObject:
   - component: {fileID: 144691472}
   - component: {fileID: 144691476}
   - component: {fileID: 144691471}
+  - component: {fileID: 144691477}
   m_Layer: 0
   m_Name: Prince (Front)
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -280,6 +281,18 @@ CircleCollider2D:
   m_Offset: {x: 0, y: -3}
   serializedVersion: 2
   m_Radius: 1
+--- !u!114 &144691477
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 144691470}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72fedae45f8e47028ef10cad028a4ab8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &165535624
 GameObject:
   m_ObjectHideFlags: 0
@@ -1063,6 +1076,7 @@ GameObject:
   - component: {fileID: 519420032}
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
+  - component: {fileID: 519420030}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1078,6 +1092,19 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_Enabled: 1
+--- !u!114 &519420030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cadda7bbf0d62e344b2bb15bbe9b3800, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 144691475}
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0

@@ -1,23 +1,17 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class CameraManager : MonoBehaviour
+namespace MonoBehaviours
 {
-
-    public Transform target;
-
-    // Start is called before the first frame update
-    void Start()
+    public class CameraManager : MonoBehaviour
     {
-        
-    }
+        public Transform target;
 
-    // Update is called once per frame
-    void Update()
-    {
-        var transform1 = transform;
-        var position = target.transform.position;
-        transform1.position = new Vector3(position.x, position.y, transform1.position.z);
+        // Update is called once per frame
+        private void Update()
+        {
+            var transform1 = transform;
+            var position = target.transform.position;
+            transform1.position = new Vector3(position.x, position.y, transform1.position.z);
+        }
     }
 }

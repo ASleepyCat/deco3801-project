@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6368755828676003962}
   - component: {fileID: 7665917477162426110}
   m_Layer: 0
-  m_Name: NPC Test
+  m_Name: NPC
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -146,6 +146,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8544461230701745884}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6937ebc4e2023a1459613170d83a48d3, type: 3}
+  m_Script: {fileID: 11500000, guid: f9732f494ce582942a7c241af2d174db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  item: {fileID: 0}

@@ -14,4 +14,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/BuckyRoom.unity
     guid: aef8b669383b29a488ede941cf36c401
+  - enabled: 1
+    path: Assets/Scenes/CastleMapScene.unity
+    guid: 54a92e1dee3c116468ac4cebf442d5f7
+  - enabled: 1
+    path: Assets/Scenes/CouncilRoom.unity
+    guid: 96d99c23f144bda439d8c2f930856ad9
   m_configObjects: {}

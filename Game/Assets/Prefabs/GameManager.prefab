@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4769862223290924601}
   - component: {fileID: 4769862223290924600}
-  - component: {fileID: 6027638888224281293}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: GameMananger
@@ -44,16 +43,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18a3a6ffe68d4deb858dd8304a79155c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &6027638888224281293
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4769862223290924607}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 121ff7ca9a804325b603a86e6a4591bf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  healthPoint: {fileID: 10900, guid: 0000000000000000f000000000000000, type: 0}
+  restartLevel: PrinceRoomScene
+  health: {fileID: 0}
+  inventory: {fileID: 0}

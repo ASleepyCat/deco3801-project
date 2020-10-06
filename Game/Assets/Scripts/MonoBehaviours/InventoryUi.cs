@@ -16,6 +16,13 @@ namespace MonoBehaviours
         
         private void Start()
         {
+            if (GameManager.Instance.inventory != null)
+            {
+                Destroy(gameObject);
+                return;
+            }
+            DontDestroyOnLoad(gameObject);
+            GameManager.Instance.inventory = this;
             _inventory = Inventory.instance;
             _inventory.onItemAddedCallback = UpdateUi;
             _slots = itemsParent.GetComponentsInChildren<InventorySlot>();

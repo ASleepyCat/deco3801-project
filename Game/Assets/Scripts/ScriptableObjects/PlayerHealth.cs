@@ -28,7 +28,7 @@ namespace ScriptableObjects
         /// </returns>
         public bool IsGameOver()
         {
-            return health == 0;
+            return health <= 0;
         }
     }
 }

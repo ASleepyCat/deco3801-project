@@ -6,8 +6,7 @@ namespace ScriptableObjects
     {
         [SerializeField] public int health = 3;
         public delegate void OnHealthDecrement();
-
-        public OnHealthDecrement onHealthDecrementCallback;
+        public OnHealthDecrement ONHealthDecrementCallback;
 
         /// <summary>
         /// Decrements <code>health</code> and updates the health UI.
@@ -17,7 +16,7 @@ namespace ScriptableObjects
         {
             if (health <= 0) return;
             --health;
-            onHealthDecrementCallback?.Invoke();
+            ONHealthDecrementCallback?.Invoke();
         }
 
         /// <summary>

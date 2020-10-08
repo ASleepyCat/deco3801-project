@@ -8,8 +8,6 @@ namespace MonoBehaviours
     public class PlayerHealthBar : MonoBehaviour
     {
         public Transform healthParent;
-        public delegate void OnPlayerDeath();
-        public OnPlayerDeath onPlayerDeathCallback;
         
         private PlayerHealth _health;
         private Image[] _points;
@@ -23,9 +21,8 @@ namespace MonoBehaviours
             }
             DontDestroyOnLoad(gameObject);
             GameManager.Instance.health = this;
-            onPlayerDeathCallback = GameManager.Instance.OnPlayerDeath;
             _health = ScriptableObject.CreateInstance<PlayerHealth>();
-            _health.onHealthDecrementCallback = UpdateHealth;
+            _health.ONHealthDecrementCallback = UpdateHealth;
             _points = healthParent.GetComponentsInChildren<Image>();
             SceneManager.sceneLoaded += ResetHealth;
         }
@@ -34,16 +31,16 @@ namespace MonoBehaviours
         {
             if (Input.GetKeyDown(KeyCode.E))
                 _health.DecrementHealth();
-            if (_health.IsGameOver())
-            {
-                onPlayerDeathCallback?.Invoke();
-                SceneManager.LoadScene("GameOver");   
-            }
         }
 
         private void UpdateHealth()
         {
             _points[_health.health].enabled = false;
+            if (_health.IsGameOver())
+            {
+                GameManager.Instance.OnPlayerDeath();
+                SceneManager.LoadScene("GameOver");   
+            }
         }
 
         private void ResetHealth(Scene scene, LoadSceneMode mode)

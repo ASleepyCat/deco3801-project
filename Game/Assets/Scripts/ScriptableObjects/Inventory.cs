@@ -5,20 +5,20 @@ namespace ScriptableObjects
 {
     public class Inventory : ScriptableObject
     {
-        public static Inventory instance;
+        public static Inventory Instance;
         public int size = 14;
         public List<Item> items = new List<Item>();
         public delegate void OnItemAdded(); // Used to update the inventory UI
-        public OnItemAdded onItemAddedCallback;
+        public OnItemAdded ONItemAddedCallback;
         
         private void Awake()
         {
-            if (instance != null)
+            if (Instance != null)
             {
                 Debug.LogWarning("More than one instance of " + GetType().Name + " found!");
                 return;
             }
-            instance = this;
+            Instance = this;
         }
 
         /// <summary>
@@ -31,7 +31,7 @@ namespace ScriptableObjects
             Debug.Log("adding " + itemToAdd.name + " to inventory");
             if (items.Count >= size) return false;
             items.Add(itemToAdd);
-            onItemAddedCallback?.Invoke();
+            ONItemAddedCallback?.Invoke();
             return true;
         }
 

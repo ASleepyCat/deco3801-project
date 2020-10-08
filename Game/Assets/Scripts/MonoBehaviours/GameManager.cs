@@ -22,6 +22,8 @@ namespace MonoBehaviours
         {
             health.healthParent.transform.parent.gameObject.SetActive(true);
             inventory.inventoryUi.transform.parent.gameObject.SetActive(true);
+            inventory.ResetUi();
+            PlayerManager.Instance.PlayerState.ResetState();
         }
 
         private void Awake()

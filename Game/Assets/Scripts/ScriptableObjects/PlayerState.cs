@@ -23,5 +23,10 @@ namespace ScriptableObjects
             State = newState;
             return true;
         }
+
+        public void ResetState()
+        {
+            SetPlayerState(States.Free);
+        }
     }
 }

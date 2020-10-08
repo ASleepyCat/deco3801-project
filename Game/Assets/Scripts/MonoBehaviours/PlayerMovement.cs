@@ -9,7 +9,7 @@ namespace MonoBehaviours
         public Rigidbody2D rb;
         public Animator animator;
         
-        private PlayerManager _manager;
+        private PlayerManager _playerManager;
         private Vector2 _movement;
         private static readonly int Speed = Animator.StringToHash("Speed");
         private static readonly int Vertical = Animator.StringToHash("Vertical");
@@ -17,7 +17,7 @@ namespace MonoBehaviours
 
         private void Awake()
         {
-            _manager = PlayerManager.instance;
+            _playerManager = PlayerManager.Instance;
         }
 
         // Update is called once per frame
@@ -34,7 +34,7 @@ namespace MonoBehaviours
         
         private bool CanMove()
         {
-            return _manager.PlayerState.State == PlayerState.States.Free;
+            return _playerManager.PlayerState.State == PlayerState.States.Free;
         }
 
         private void UpdateMovement()

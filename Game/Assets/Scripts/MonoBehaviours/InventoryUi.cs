@@ -1,4 +1,5 @@
-﻿using ScriptableObjects;
+﻿using System;
+using ScriptableObjects;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -13,23 +14,44 @@ namespace MonoBehaviours
         private Inventory _inventory; // Cached reference to inventory singleton
         private InventorySlot[] _slots;
         private PlayerManager _playerManager;
+
+        /// <summary>
+        /// Toggles the UI off and clears all the slots.
+        /// </summary>
+        public void ResetUi()
+        {
+            inventoryUi.SetActive(false);
+            foreach (var slot in _slots)
+                slot.ClearSlot();
+        }
         
         private void Start()
         {
-            _inventory = Inventory.instance;
-            _inventory.onItemAddedCallback = UpdateUi;
+            if (GameManager.Instance.inventory != null)
+            {
+                Destroy(gameObject);
+                return;
+            }
+            DontDestroyOnLoad(gameObject);
+            GameManager.Instance.inventory = this;
+            _inventory = Inventory.Instance;
+            _inventory.ONItemAddedCallback = UpdateUi;
             _slots = itemsParent.GetComponentsInChildren<InventorySlot>();
-            _playerManager = PlayerManager.instance;
+            _playerManager = PlayerManager.Instance;
         }
 
         private void Update()
         {
-            if (!Input.GetButtonDown("Inventory")) return;
-            var state = !inventoryUi.activeSelf
-                ? PlayerState.States.InInventory
-                : PlayerState.States.Free;
-            if (_playerManager.PlayerState.SetPlayerState(state))
-                inventoryUi.SetActive(!inventoryUi.activeSelf);
+            if (Input.GetButtonDown("Inventory"))
+            {
+                var inventoryOpen = inventoryUi.activeSelf;
+                var state = !inventoryOpen
+                    ? PlayerState.States.InInventory
+                    : PlayerState.States.Free;
+                Debug.Log(String.Format("open {0} state {1}", inventoryOpen, state));
+                if (_playerManager.PlayerState.SetPlayerState(state))
+                    inventoryUi.SetActive(!inventoryOpen);
+            }
         }
 
         /// <summary>

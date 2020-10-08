@@ -6,6 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
+    path: Assets/Scenes/ThroneRoomScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/PrinceRoomScene.unity
+    guid: ee3875b7732f5b74faca7a85d440d07e
+  - enabled: 1
+    path: Assets/Scenes/BuckyRoom.unity
+    guid: aef8b669383b29a488ede941cf36c401
   m_configObjects: {}

@@ -34,7 +34,7 @@ namespace MonoBehaviours
         
         private bool CanMove()
         {
-            return _playerManager.PlayerState.State == PlayerState.States.Free;
+            return true;
         }
 
         private void UpdateMovement()

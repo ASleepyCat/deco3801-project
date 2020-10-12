@@ -7,8 +7,23 @@ namespace MonoBehaviours
         public Transform target;
         public Vector2 minPosition;
         public Vector2 maxPosition;
-        
+
+        //private static bool cameraExist;
+
         // Update is called once per frame
+
+        void Start()
+        {
+            //if (!cameraExist)
+            //{
+            //    cameraExist = true;
+            //    DontDestroyOnLoad(transform.gameObject);
+            //}
+            //else
+            //{
+            //    Destroy(gameObject);
+            //}
+        }
         private void Update()
         {
             var transform1 = transform;

@@ -15,6 +15,22 @@ namespace MonoBehaviours
         private static readonly int Vertical = Animator.StringToHash("Vertical");
         private static readonly int Horizontal = Animator.StringToHash("Horizontal");
 
+        private static bool playerExist;
+
+        void Start()
+        {
+
+            if (!playerExist)
+            {
+                playerExist = true;
+                DontDestroyOnLoad(transform.gameObject);
+            }
+            else
+            {
+                Destroy(gameObject);
+            }
+        }
+
         private void Awake()
         {
             _manager = PlayerManager.instance;

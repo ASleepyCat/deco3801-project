@@ -1,13 +1,4 @@
-﻿/*
- *  This is a template verison of the VIDEUIManager1.cs script. Check that script out and the "Player Interaction" demo for more reference.
- *  This one doesn't include an item popup as that demo was mostly hard coded.
- *  Doesn't include reference to a player script or gameobject. How you handle that is up to you.
- *  Doesn't save dialogue and VA state.
- *  Player choices are not instantiated. You need to set the references manually.
-    
- *  You are NOT limited to what this script can do. This script is only for convenience. You are completely free to write your own manager or build from this one.
- */
-
+﻿
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;

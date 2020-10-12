@@ -42,7 +42,7 @@ namespace MonoBehaviours
             UpdateMovement();
         }
 
-        private void FixedUpdate()
+        private void MoveCharacter()
         {
             // Movement Handler
             rb.MovePosition(rb.position + _movement * (moveSpeed * Time.fixedDeltaTime));
@@ -55,18 +55,34 @@ namespace MonoBehaviours
 
         private void UpdateMovement()
         {
-            if (!CanMove())
+            //if (!CanMove())
+            //{
+            //    _movement.x = 0;
+            //    _movement.y = 0;
+            //}
+            //else
+            //{
+            //    _movement.x = Input.GetAxisRaw("Horizontal");
+            //    _movement.y = Input.GetAxisRaw("Vertical");
+            //}
+            
+            _movement.x = Input.GetAxisRaw("Horizontal");
+            _movement.y = Input.GetAxisRaw("Vertical");
+
+            if (_movement != Vector2.zero)
             {
-                _movement.x = 0;
-                _movement.y = 0;
+                MoveCharacter();
+                animator.SetFloat("moveX", _movement.x);
+                animator.SetFloat("moveY", _movement.y);
+                animator.SetBool("moving", true);
             }
             else
             {
-                _movement.x = Input.GetAxisRaw("Horizontal");
-                _movement.y = Input.GetAxisRaw("Vertical");
+                animator.SetBool("moving", false);
             }
-            animator.SetFloat(Horizontal, _movement.x);
-            animator.SetFloat(Vertical, _movement.y);
+            
+            //animator.SetFloat(Horizontal, _movement.x);
+            //animator.SetFloat(Vertical, _movement.y);
             animator.SetFloat(Speed, _movement.sqrMagnitude);
         }
     }

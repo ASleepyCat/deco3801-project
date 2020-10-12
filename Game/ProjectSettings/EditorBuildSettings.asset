@@ -6,19 +6,19 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/ThroneRoomScene.unity
+    path: Assets/Scenes/Main.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/Scenes/PrinceRoomScene.unity
+    path: Assets/Scenes/Template/PrinceRoomScene.unity
     guid: ee3875b7732f5b74faca7a85d440d07e
   - enabled: 1
-    path: Assets/Scenes/BuckyRoom.unity
+    path: Assets/Scenes/Template/BuckyRoom.unity
     guid: aef8b669383b29a488ede941cf36c401
   - enabled: 1
-    path: Assets/Scenes/CastleMap_Prince.unity
+    path: Assets/Scenes/Template/CastleMap_Prince.unity
     guid: 54a92e1dee3c116468ac4cebf442d5f7
   - enabled: 1
-    path: Assets/Scenes/CouncilRoom.unity
+    path: Assets/Scenes/Template/CouncilRoom.unity
     guid: 96d99c23f144bda439d8c2f930856ad9
   - enabled: 1
     path: Assets/Scenes/CastleMap_Throne.unity

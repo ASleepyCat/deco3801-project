@@ -10,7 +10,7 @@ namespace MonoBehaviours
         public Transform healthParent;
         
         private PlayerHealth _health;
-        private Image[] _points;
+        private Text[] _points;
 
         private void Start()
         {
@@ -23,7 +23,7 @@ namespace MonoBehaviours
             GameManager.Instance.health = this;
             _health = ScriptableObject.CreateInstance<PlayerHealth>();
             _health.ONHealthDecrementCallback = UpdateHealth;
-            _points = healthParent.GetComponentsInChildren<Image>();
+            _points = healthParent.GetComponentsInChildren<Text>();
             SceneManager.sceneLoaded += ResetHealth;
         }
 

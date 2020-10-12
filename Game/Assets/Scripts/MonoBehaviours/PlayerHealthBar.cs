@@ -8,9 +8,15 @@ namespace MonoBehaviours
     public class PlayerHealthBar : MonoBehaviour
     {
         public Transform healthParent;
+        public bool showHealth;
         
         private PlayerHealth _health;
         private Image[] _points;
+        private RectTransform _uiRectTransform;
+        // These positions are from the Pos X and Pos Y values in the inspector
+        private readonly Vector2 _hide = new Vector2(893, -33.5f); // Off screen
+        private readonly Vector2 _show = new Vector2(698.5f, -33.5f);
+        private const float Speed = 893 - 698.5f; // Move health bar in one second
 
         private void Start()
         {
@@ -25,12 +31,19 @@ namespace MonoBehaviours
             _health.ONHealthDecrementCallback = UpdateHealth;
             _points = healthParent.GetComponentsInChildren<Image>();
             SceneManager.sceneLoaded += ResetHealth;
+            _uiRectTransform = healthParent.GetComponent<RectTransform>();
         }
 
         private void Update()
         {
-            if (Input.GetKeyDown(KeyCode.E))
-                _health.DecrementHealth();
+            MoveHealthBar();
+        }
+
+        private void MoveHealthBar()
+        {
+            var position = showHealth ? _show : _hide;
+            _uiRectTransform.anchoredPosition = Vector2.MoveTowards(_uiRectTransform.anchoredPosition, 
+                position, Speed * Time.deltaTime);
         }
 
         private void UpdateHealth()

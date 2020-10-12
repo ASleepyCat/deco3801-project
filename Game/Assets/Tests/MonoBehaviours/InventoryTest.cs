@@ -7,12 +7,6 @@ namespace Tests.MonoBehaviours
     [TestFixture]
     public class InventoryTest
     {
-        [TearDown]
-        public void CleanUp()
-        {
-            Inventory.Instance = null;
-        }
-        
         [Test]
         public void AddItemTest()
         {

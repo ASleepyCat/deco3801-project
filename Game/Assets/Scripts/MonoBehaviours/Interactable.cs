@@ -10,8 +10,17 @@ namespace MonoBehaviours
         public UIManager diagUI;
         public Item item;
 
+<<<<<<< HEAD
         //Stored current VA when inside a trigger
         public VIDE_Assign inTrigger;
+=======
+        private GameManager _gameManager;
+
+        private void Start()
+        {
+            _gameManager = GameManager.Instance;
+        }
+>>>>>>> master
 
         private void OnTriggerStay2D(Collider2D other)
         {
@@ -32,10 +41,16 @@ namespace MonoBehaviours
         {
             Debug.Log("interact");
             // Return if player is already busy
-            if (!PlayerManager.Instance.PlayerState.SetPlayerState(PlayerState.States.InDialogue)) return;
+<<<<<<< HEAD
+            if (!_gameManager.PlayerState.SetPlayerState(PlayerState.States.InDialogue)) return;
             //Inventory.Instance.AddItem(item); // TODO: Change this to start dialogue
             diagUI.Interact(inTrigger);
-            PlayerManager.Instance.PlayerState.SetPlayerState(PlayerState.States.Free);
+            _gameManager.PlayerState.SetPlayerState(PlayerState.States.Free);
+=======
+            if (!_gameManager.PlayerState.SetPlayerState(PlayerState.States.InDialogue)) return;
+            _gameManager.inventory.AddItem(item); // TODO: Change this to start dialogue
+            _gameManager.PlayerState.SetPlayerState(PlayerState.States.Free);
+>>>>>>> master
         }
     }
 }

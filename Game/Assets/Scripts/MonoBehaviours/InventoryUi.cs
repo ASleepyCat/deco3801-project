@@ -1,5 +1,4 @@
-﻿using System;
-using ScriptableObjects;
+﻿using ScriptableObjects;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -13,7 +12,6 @@ namespace MonoBehaviours
 
         private Inventory _inventory; // Cached reference to inventory singleton
         private InventorySlot[] _slots;
-        private PlayerManager _playerManager;
 
         /// <summary>
         /// Toggles the UI off and clears all the slots.
@@ -27,17 +25,16 @@ namespace MonoBehaviours
         
         private void Start()
         {
-            if (GameManager.Instance.inventory != null)
+            if (GameManager.Instance.inventoryUi != null)
             {
                 Destroy(gameObject);
                 return;
             }
             DontDestroyOnLoad(gameObject);
-            GameManager.Instance.inventory = this;
-            _inventory = Inventory.Instance;
+            GameManager.Instance.inventoryUi = this;
+            _inventory = GameManager.Instance.inventory;
             _inventory.ONItemAddedCallback = UpdateUi;
             _slots = itemsParent.GetComponentsInChildren<InventorySlot>();
-            _playerManager = PlayerManager.Instance;
         }
 
         private void Update()
@@ -48,8 +45,7 @@ namespace MonoBehaviours
                 var state = !inventoryOpen
                     ? PlayerState.States.InInventory
                     : PlayerState.States.Free;
-                Debug.Log(String.Format("open {0} state {1}", inventoryOpen, state));
-                if (_playerManager.PlayerState.SetPlayerState(state))
+                if (GameManager.Instance.PlayerState.SetPlayerState(state))
                     inventoryUi.SetActive(!inventoryOpen);
             }
         }

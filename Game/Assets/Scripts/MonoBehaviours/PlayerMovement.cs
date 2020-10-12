@@ -17,9 +17,12 @@ namespace MonoBehaviours
 
         private static bool playerExist;
 
-        void Start()
-        {
+        
 
+        private void Awake()
+        {
+            _manager = PlayerManager.instance;
+           // Start();
             if (!playerExist)
             {
                 playerExist = true;
@@ -31,9 +34,9 @@ namespace MonoBehaviours
             }
         }
 
-        private void Awake()
+        void Start()
         {
-            _manager = PlayerManager.instance;
+
         }
 
         // Update is called once per frame
@@ -48,9 +51,9 @@ namespace MonoBehaviours
             rb.MovePosition(rb.position + _movement * (moveSpeed * Time.fixedDeltaTime));
         }
         
-        private bool CanMove()
+        private static bool CanMove()
         {
-            return _manager.PlayerState.State == PlayerState.States.Free;
+            return GameManager.Instance.PlayerState.State == PlayerState.States.Free;
         }
 
         private void UpdateMovement()

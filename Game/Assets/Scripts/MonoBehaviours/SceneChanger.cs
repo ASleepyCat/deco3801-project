@@ -9,7 +9,10 @@ namespace MonoBehaviours
 
         private void OnTriggerEnter2D(Collider2D collision)
         {
-            SceneManager.LoadScene(newScene, LoadSceneMode.Single);
+            if (collision.gameObject.name == "Player")
+            {
+                SceneManager.LoadScene(newScene, LoadSceneMode.Single);
+            }
         }
     }
 }

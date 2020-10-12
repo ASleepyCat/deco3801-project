@@ -43,3 +43,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18a3a6ffe68d4deb858dd8304a79155c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  restartLevel: PrinceRoomScene
+  health: {fileID: 0}
+  inventory: {fileID: 0}

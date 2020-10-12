@@ -74,6 +74,7 @@ namespace MonoBehaviours
                 MoveCharacter();
                 animator.SetFloat("moveX", _movement.x);
                 animator.SetFloat("moveY", _movement.y);
+               // animator.SetFloat(Speed, _movement.sqrMagnitude);
                 animator.SetBool("moving", true);
             }
             else
@@ -83,7 +84,7 @@ namespace MonoBehaviours
             
             //animator.SetFloat(Horizontal, _movement.x);
             //animator.SetFloat(Vertical, _movement.y);
-            animator.SetFloat(Speed, _movement.sqrMagnitude);
+            
         }
     }
 }

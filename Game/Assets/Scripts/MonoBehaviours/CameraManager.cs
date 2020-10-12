@@ -7,6 +7,7 @@ namespace MonoBehaviours
         public Transform target;
         public Vector2 minPosition;
         public Vector2 maxPosition;
+        public float smoothing;
 
         //private static bool cameraExist;
 
@@ -26,11 +27,24 @@ namespace MonoBehaviours
         }
         private void Update()
         {
-            var transform1 = transform;
-            Vector3 targetPosition = new Vector3(target.transform.position.x, target.transform.position.y, transform1.position.z);
-            targetPosition.x = Mathf.Clamp(targetPosition.x, minPosition.x, maxPosition.x);
-            targetPosition.y = Mathf.Clamp(targetPosition.y, minPosition.y, maxPosition.y);
-            transform1.position = new Vector3(targetPosition.x, targetPosition.y, transform1.position.z);
+            if (transform.position != target.position)
+            {
+                Vector3 targetPosition = new Vector3(target.position.x, target.position.y, transform.position.z);
+
+                targetPosition.x = Mathf.Clamp(targetPosition.x, minPosition.x, maxPosition.x);
+                targetPosition.y = Mathf.Clamp(targetPosition.y, minPosition.y, maxPosition.y);
+
+                transform.position = Vector3.Lerp(transform.position, targetPosition, smoothing);
+            }
+            else
+            {
+
+            }
+            //var transform1 = transform;
+            //Vector3 targetPosition = new Vector3(target.transform.position.x, target.transform.position.y, transform1.position.z);
+            //targetPosition.x = Mathf.Clamp(targetPosition.x, minPosition.x, maxPosition.x);
+            //targetPosition.y = Mathf.Clamp(targetPosition.y, minPosition.y, maxPosition.y);
+            //transform1.position = new Vector3(targetPosition.x, targetPosition.y, transform1.position.z);
         }
     }
 }

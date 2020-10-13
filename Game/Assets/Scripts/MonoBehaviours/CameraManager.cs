@@ -11,10 +11,6 @@ namespace MonoBehaviours
 
         // Update is called once per frame
 
-        void Start()
-        {
-           
-        }
         private void Update()
         {
             if (transform.position != target.position)
@@ -25,10 +21,6 @@ namespace MonoBehaviours
                 targetPosition.y = Mathf.Clamp(targetPosition.y, minPosition.y, maxPosition.y);
 
                 transform.position = Vector3.Lerp(transform.position, targetPosition, smoothing);
-            }
-            else
-            {
-
             }
         }
     }

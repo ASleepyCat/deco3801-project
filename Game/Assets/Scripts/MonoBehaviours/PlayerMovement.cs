@@ -34,18 +34,13 @@ namespace MonoBehaviours
             }
         }
 
-        void Start()
-        {
-
-        }
-
         // Update is called once per frame
         private void Update()
         {
             UpdateMovement();
         }
 
-        private void MoveCharacter()
+        private void FixedUpdate()
         {
             // Movement Handler
             rb.MovePosition(rb.position + _movement * (moveSpeed * Time.fixedDeltaTime));
@@ -74,7 +69,7 @@ namespace MonoBehaviours
 
             if (_movement != Vector2.zero)
             {
-                MoveCharacter();
+                FixedUpdate();
                 animator.SetFloat("moveX", _movement.x);
                 animator.SetFloat("moveY", _movement.y);
                // animator.SetFloat(Speed, _movement.sqrMagnitude);

@@ -75,6 +75,13 @@ namespace MonoBehaviours
                // animator.SetFloat(Speed, _movement.sqrMagnitude);
                 animator.SetBool("moving", true);
             }
+            else if (!CanMove())
+            {
+                _movement.x = 0;
+                _movement.y = 0;
+                animator.SetBool("moving", false);
+
+            }
             else
             {
                 animator.SetBool("moving", false);

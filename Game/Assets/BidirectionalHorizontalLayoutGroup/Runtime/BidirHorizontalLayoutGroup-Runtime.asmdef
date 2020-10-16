@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
     "name": "BidirHorizontalLayoutGroup-Runtime",
     "references": [],
@@ -10,4 +11,18 @@
     "defineConstraints": [],
     "versionDefines": [],
     "noEngineReferences": false
+=======
+{
+    "name": "BidirHorizontalLayoutGroup-Runtime",
+    "references": [],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+>>>>>>> master
 }

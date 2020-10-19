@@ -7,15 +7,19 @@ namespace MonoBehaviours
         public Transform target;
         public Vector2 minPosition;
         public Vector2 maxPosition;
+        public float smoothing;
         
-        // Update is called once per frame
-        private void Update()
+        private void FixedUpdate()
         {
-            var transform1 = transform;
-            Vector3 targetPosition = new Vector3(target.transform.position.x, target.transform.position.y, transform1.position.z);
+            var position = target.position;
+            var transformPosition = transform.position;
+            var targetPosition = new Vector3(position.x, position.y, transformPosition.z);
+
             targetPosition.x = Mathf.Clamp(targetPosition.x, minPosition.x, maxPosition.x);
             targetPosition.y = Mathf.Clamp(targetPosition.y, minPosition.y, maxPosition.y);
-            transform1.position = new Vector3(targetPosition.x, targetPosition.y, transform1.position.z);
+
+            transformPosition = Vector3.Lerp(transformPosition, targetPosition, smoothing);
+            transform.position = transformPosition;
         }
     }
 }

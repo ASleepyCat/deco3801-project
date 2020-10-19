@@ -9,10 +9,24 @@ namespace MonoBehaviours
         public Rigidbody2D rb;
         public Animator animator;
         
+        private PlayerManager _manager;
         private Vector2 _movement;
-        private static readonly int Speed = Animator.StringToHash("Speed");
-        private static readonly int Vertical = Animator.StringToHash("Vertical");
-        private static readonly int Horizontal = Animator.StringToHash("Horizontal");
+        private static readonly int MoveX = Animator.StringToHash("moveX");
+        private static readonly int MoveY = Animator.StringToHash("moveY");
+        private static readonly int Moving = Animator.StringToHash("moving");
+        private static bool _playerExist;
+
+        private void Awake()
+        {
+            _manager = PlayerManager.instance;
+            if (!_playerExist)
+            {
+                _playerExist = true;
+                DontDestroyOnLoad(transform.gameObject);
+            }
+            else
+                Destroy(gameObject);
+        }
 
         // Update is called once per frame
         private void Update()
@@ -43,9 +57,15 @@ namespace MonoBehaviours
                 _movement.x = Input.GetAxisRaw("Horizontal");
                 _movement.y = Input.GetAxisRaw("Vertical");
             }
-            animator.SetFloat(Horizontal, _movement.x);
-            animator.SetFloat(Vertical, _movement.y);
-            animator.SetFloat(Speed, _movement.sqrMagnitude);
+
+            if (_movement != Vector2.zero)
+            {
+                animator.SetFloat(MoveX, _movement.x);
+                animator.SetFloat(MoveY, _movement.y);
+                animator.SetBool(Moving, true);
+            }
+            else
+                animator.SetBool(Moving, false);
         }
     }
 }

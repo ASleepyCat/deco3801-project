@@ -7,7 +7,7 @@ namespace MonoBehaviours
     public class Interactable : MonoBehaviour
     {
         //Reference to our diagUI script for quick access
-        public UIManager diagUI;
+        public UIManager2 diagUI;
 
         //Stored current VA when inside a trigger
         public VIDE_Assign inTrigger;
@@ -37,10 +37,10 @@ namespace MonoBehaviours
         {
             Debug.Log("interact");
             // Return if player is already busy
-
+   
             if (!_gameManager.PlayerState.SetPlayerState(PlayerState.States.InDialogue)) return;
             diagUI.Interact(inTrigger);
-            _gameManager.PlayerState.SetPlayerState(PlayerState.States.Free);
+            //_gameManager.PlayerState.SetPlayerState(PlayerState.States.Free);
             ;
         }
     }

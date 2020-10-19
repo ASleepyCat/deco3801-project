@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &4769862223290924607
+--- !u!1 &5409617808733504741
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,23 +8,23 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4769862223290924601}
-  - component: {fileID: 4769862223290924600}
-  - component: {fileID: 8859227552261491034}
+  - component: {fileID: 5409617808733504739}
+  - component: {fileID: 5409617808733504738}
+  - component: {fileID: 8345568487163900800}
   m_Layer: 0
-  m_Name: GameManager
+  m_Name: GameManager 2
   m_TagString: GameMananger
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4769862223290924601
+--- !u!4 &5409617808733504739
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4769862223290924607}
+  m_GameObject: {fileID: 5409617808733504741}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 386, y: 219, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -32,13 +32,13 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4769862223290924600
+--- !u!114 &5409617808733504738
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4769862223290924607}
+  m_GameObject: {fileID: 5409617808733504741}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 18a3a6ffe68d4deb858dd8304a79155c, type: 3}
@@ -48,13 +48,13 @@ MonoBehaviour:
   health: {fileID: 0}
   inventoryUi: {fileID: 0}
   inventory: {fileID: 0}
---- !u!114 &8859227552261491034
+--- !u!114 &8345568487163900800
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4769862223290924607}
+  m_GameObject: {fileID: 5409617808733504741}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 084705b5494400848ad355557aeaa0dd, type: 3}
@@ -63,6 +63,9 @@ MonoBehaviour:
   NPCContainer: {fileID: 0}
   PlayerContainer: {fileID: 0}
   NPCText: {fileID: 0}
-  TextChoices: []
+  TextChoices:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   NPCSprite: {fileID: 0}
   PlayerSprite: {fileID: 0}

@@ -9,10 +9,30 @@ namespace MonoBehaviours
         public Rigidbody2D rb;
         public Animator animator;
         
+        private PlayerManager _manager;
         private Vector2 _movement;
         private static readonly int Speed = Animator.StringToHash("Speed");
         private static readonly int Vertical = Animator.StringToHash("Vertical");
         private static readonly int Horizontal = Animator.StringToHash("Horizontal");
+
+        private static bool playerExist;
+
+        
+
+        private void Awake()
+        {
+            _manager = PlayerManager.instance;
+           // Start();
+            if (!playerExist)
+            {
+                playerExist = true;
+                DontDestroyOnLoad(transform.gameObject);
+            }
+            else
+            {
+                Destroy(gameObject);
+            }
+        }
 
         // Update is called once per frame
         private void Update()
@@ -33,19 +53,43 @@ namespace MonoBehaviours
 
         private void UpdateMovement()
         {
-            if (!CanMove())
+            //if (!CanMove())
+            //{
+            //    _movement.x = 0;
+            //    _movement.y = 0;
+            //}
+            //else
+            //{
+            //    _movement.x = Input.GetAxisRaw("Horizontal");
+            //    _movement.y = Input.GetAxisRaw("Vertical");
+            //}
+            
+            _movement.x = Input.GetAxisRaw("Horizontal");
+            _movement.y = Input.GetAxisRaw("Vertical");
+
+            if (_movement != Vector2.zero)
+            {
+                FixedUpdate();
+                animator.SetFloat("moveX", _movement.x);
+                animator.SetFloat("moveY", _movement.y);
+               // animator.SetFloat(Speed, _movement.sqrMagnitude);
+                animator.SetBool("moving", true);
+            }
+            else if (!CanMove())
             {
                 _movement.x = 0;
                 _movement.y = 0;
+                animator.SetBool("moving", false);
+
             }
             else
             {
-                _movement.x = Input.GetAxisRaw("Horizontal");
-                _movement.y = Input.GetAxisRaw("Vertical");
+                animator.SetBool("moving", false);
             }
-            animator.SetFloat(Horizontal, _movement.x);
-            animator.SetFloat(Vertical, _movement.y);
-            animator.SetFloat(Speed, _movement.sqrMagnitude);
+            
+            //animator.SetFloat(Horizontal, _movement.x);
+            //animator.SetFloat(Vertical, _movement.y);
+            
         }
     }
 }

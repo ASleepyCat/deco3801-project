@@ -1,12 +1,10 @@
-﻿using ScriptableObjects;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace MonoBehaviours
 {
     public class PlayerManager : MonoBehaviour
     {
         public static PlayerManager instance;
-        public PlayerState PlayerState { get; private set; }
 
         private void Awake()
         {
@@ -16,7 +14,6 @@ namespace MonoBehaviours
                 return;
             }
             instance = this;
-            PlayerState = ScriptableObject.CreateInstance<PlayerState>();
         }
     }
 }

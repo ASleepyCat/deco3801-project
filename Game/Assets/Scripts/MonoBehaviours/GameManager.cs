@@ -1,5 +1,7 @@
 ﻿using ScriptableObjects;
 using UnityEngine;
+using UnityEngine.Playables;
+using UnityEngine.SceneManagement;
 
 namespace MonoBehaviours
 {
@@ -11,6 +13,7 @@ namespace MonoBehaviours
         public InventoryUi inventoryUi;
         public PlayerState PlayerState { get; private set; }
         public Inventory inventory;
+        public PlayableDirector director;
 
         public void OnPlayerDeath()
         {
@@ -24,6 +27,16 @@ namespace MonoBehaviours
             inventoryUi.inventoryUi.transform.parent.gameObject.SetActive(true);
             inventoryUi.ResetUi();
             PlayerState.ResetState();
+        }
+
+        public void PlayAnimation()
+        {
+            director.Play();
+        }
+
+        public void LoadNextScene(string sceneName)
+        {
+            SceneManager.LoadScene(sceneName);
         }
 
         private void Awake()

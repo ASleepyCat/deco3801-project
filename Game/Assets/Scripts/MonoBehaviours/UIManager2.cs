@@ -20,6 +20,8 @@ public class UIManager2 : MonoBehaviour {
     private void Awake()
     {
         //VD.LoadDialogues(); //Load all dialogues to memory so that we dont spend time doing so later
+        NPCContainer.SetActive(false);
+        PlayerContainer.SetActive(false);
     }
 
     // Start is called before the first frame update

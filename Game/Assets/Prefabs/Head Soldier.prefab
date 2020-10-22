@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7669904977251433461}
   - component: {fileID: 7669904977251433462}
   - component: {fileID: 7669904977251433463}
-  - component: {fileID: 7669904977251433460}
+  - component: {fileID: 805732558474303749}
   m_Layer: 0
   m_Name: Head Soldier
   m_TagString: Untagged
@@ -151,8 +151,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   diagUI: {fileID: 0}
-  inTrigger: {fileID: 7669904977251433460}
---- !u!114 &7669904977251433460
+  inTrigger: {fileID: 805732558474303749}
+--- !u!114 &805732558474303749
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -178,19 +178,20 @@ MonoBehaviour:
   - Level1Council
   - Level1Lieutenant
   - Level1Scence1
+  - Level1Scene2
   - MrCube
   - NPCOnly
   - QuestChartDemo
   - TriggeredDude
   - Witch
-  assignedIndex: 11
-  assignedID: 52910
-  assignedDialogue: Level1Lieutenant
+  assignedIndex: -1
+  assignedID: 0
+  assignedDialogue: 
   interactionCount: 0
   alias: 
   overrideStartNode: -1
-  defaultNPCSprite: {fileID: 21300000, guid: aed25b998a366d044b7fc76229795ff4, type: 3}
-  defaultPlayerSprite: {fileID: 21300000, guid: f3aefee2fd407a14b8a512455752576c, type: 3}
+  defaultNPCSprite: {fileID: 0}
+  defaultPlayerSprite: {fileID: 0}
   targetManager: {fileID: 0}
   preload: 0
   notuptodate: 0

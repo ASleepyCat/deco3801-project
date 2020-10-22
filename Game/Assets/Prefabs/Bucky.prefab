@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 6429954702741046988}
   - component: {fileID: 6429954702741046991}
   - component: {fileID: 6429954702741046984}
-  - component: {fileID: 6429954702741046987}
   - component: {fileID: 6429954702741046986}
+  - component: {fileID: 286074580853585554}
   m_Layer: 0
   m_Name: Bucky
   m_TagString: Untagged
@@ -138,7 +138,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.08, y: 7.1}
   m_EdgeRadius: 0.2
---- !u!114 &6429954702741046987
+--- !u!114 &6429954702741046986
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6429954702741046990}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9732f494ce582942a7c241af2d174db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  diagUI: {fileID: 0}
+  inTrigger: {fileID: 286074580853585554}
+--- !u!114 &286074580853585554
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -164,19 +178,20 @@ MonoBehaviour:
   - Level1Council
   - Level1Lieutenant
   - Level1Scence1
+  - Level1Scene2
   - MrCube
   - NPCOnly
   - QuestChartDemo
   - TriggeredDude
   - Witch
-  assignedIndex: 9
-  assignedID: 885
-  assignedDialogue: Level1Bucky
+  assignedIndex: -1
+  assignedID: 0
+  assignedDialogue: 
   interactionCount: 0
   alias: 
   overrideStartNode: -1
-  defaultNPCSprite: {fileID: 21300000, guid: cf1b27868a80beb4fa359921aa9a2121, type: 3}
-  defaultPlayerSprite: {fileID: 21300000, guid: f3aefee2fd407a14b8a512455752576c, type: 3}
+  defaultNPCSprite: {fileID: 0}
+  defaultPlayerSprite: {fileID: 0}
   targetManager: {fileID: 0}
   preload: 0
   notuptodate: 0
@@ -185,17 +200,3 @@ MonoBehaviour:
   langs: []
   S_playerDiags: []
   S_actionNodes: []
---- !u!114 &6429954702741046986
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6429954702741046990}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f9732f494ce582942a7c241af2d174db, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  diagUI: {fileID: 0}
-  inTrigger: {fileID: 6429954702741046987}

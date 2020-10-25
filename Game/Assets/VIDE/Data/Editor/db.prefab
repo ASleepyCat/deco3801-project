@@ -43,22 +43,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 268dc70b105993846a123be43345df63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fileIndex: 13
+  fileIndex: 20
   skinIndex: 0
   loadTag: 
   startID: 0
   curFocusID: 0
-  currentID: 75925
+  currentID: 23214
   autosave: 1
   previewPanning: 0
-  currentDiag: 13
+  currentDiag: 20
   locEdit: 0
   pNodeID: 18
   aNodeID: 2
   S_playerDiags:
   - commentCount: 1
     s_comment:
-    - text: Comment...
+    - text: "\u201CDear Bucky,\r\nWe\u2019ll be meeting at your house tonight.\r\nRegards,\r\nV\u201D\r\n"
       extraData: ExtraData
       inputSetIndex: 0
       outputNodeIndex: -1
@@ -76,10 +76,10 @@ MonoBehaviour:
     ID: 0
     rect:
       serializedVersion: 2
-      x: 230
-      y: 220
+      x: -310
+      y: 30
       width: 348
-      height: 133
+      height: 199.2
     pTag: 
     expand: 0
     sprite: {fileID: 0}

@@ -64,5 +64,20 @@ namespace MonoBehaviours
             foreach (var health in _points)
                 health.enabled = true;
         }
+
+        public void showPlayerHealth()
+        {
+            showHealth = true;
+        }
+
+        public void reducePlayerHealth()
+        {
+            _health.DecrementHealth();
+        }
+
+        public void hidePlayerHealth()
+        {
+            showHealth = false;
+        }
     }
 }

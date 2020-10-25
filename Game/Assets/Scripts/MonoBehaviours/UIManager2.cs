@@ -42,7 +42,7 @@ public class UIManager2 : MonoBehaviour {
             {
                 if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow))
                 {
-                    if (data.commentIndex < 3 - 1)
+                    if (data.commentIndex < data.comments.Length - 1)
                         data.commentIndex++;
                 }
                 if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow))
@@ -51,10 +51,14 @@ public class UIManager2 : MonoBehaviour {
                         data.commentIndex--;
                 }
                 //Color the Player options. Blue for the selected one
-                for (int i = 0; i < 3; i++)
+                for (int i = 0; i < data.comments.Length; i++)
                 {
-                    TextChoices[i].transform.GetComponent<Text>().color = Color.black;
+                    
                     if (i == data.commentIndex) TextChoices[i].transform.GetComponent<Text>().color = Color.blue;
+                    else
+                    {
+                        TextChoices[i].transform.GetComponent<Text>().color = Color.black;
+                    }
                 }
             }
 

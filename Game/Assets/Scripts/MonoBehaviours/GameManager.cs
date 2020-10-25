@@ -36,7 +36,7 @@ namespace MonoBehaviours
 
         public void LoadNextScene(string sceneName)
         {
-            SceneManager.LoadScene(sceneName);
+            SceneManager.LoadScene(sceneName, LoadSceneMode.Single);
         }
 
         private void Awake()

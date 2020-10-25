@@ -33,18 +33,40 @@ public class UIManager2 : MonoBehaviour {
 
     // Update is called once per frame
     void Update()
-    {   
-        if (Input.GetKeyDown(KeyCode.Return))
+    {
+        var data = VD.nodeData;
+
+        if (VD.isActive)
         {
-            if (VD.isActive)
+            if (!data.pausedAction && data.isPlayer)
+            {
+                if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow))
+                {
+                    if (data.commentIndex < 3 - 1)
+                        data.commentIndex++;
+                }
+                if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow))
+                {
+                    if (data.commentIndex > 0)
+                        data.commentIndex--;
+                }
+                //Color the Player options. Blue for the selected one
+                for (int i = 0; i < 3; i++)
+                {
+                    TextChoices[i].transform.GetComponent<Text>().color = Color.black;
+                    if (i == data.commentIndex) TextChoices[i].transform.GetComponent<Text>().color = Color.blue;
+                }
+            }
+
+            if (Input.GetKeyDown(KeyCode.Return))
             {
                 VD.Next();
-            } else
-            {
-                
             }
+        
         }
     }
+
+
 
     //Call this to begin the dialogue and advance through it
     public void Interact(VIDE_Assign dialogue)

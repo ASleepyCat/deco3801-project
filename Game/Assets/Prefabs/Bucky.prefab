@@ -190,8 +190,8 @@ MonoBehaviour:
   interactionCount: 0
   alias: 
   overrideStartNode: -1
-  defaultNPCSprite: {fileID: 0}
-  defaultPlayerSprite: {fileID: 0}
+  defaultNPCSprite: {fileID: 21300000, guid: cf1b27868a80beb4fa359921aa9a2121, type: 3}
+  defaultPlayerSprite: {fileID: 21300000, guid: f3aefee2fd407a14b8a512455752576c, type: 3}
   targetManager: {fileID: 0}
   preload: 0
   notuptodate: 0

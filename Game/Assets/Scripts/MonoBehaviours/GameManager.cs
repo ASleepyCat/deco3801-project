@@ -6,7 +6,7 @@ namespace MonoBehaviours
     public class GameManager : MonoBehaviour
     {
         public static GameManager Instance;
-        public string restartLevel = "PrinceRoomScene";
+        public string restartLevel = "Scenes/Main";
         public PlayerHealthBar health;
         public InventoryUi inventoryUi;
         public PlayerState PlayerState { get; private set; }

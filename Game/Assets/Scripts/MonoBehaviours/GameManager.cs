@@ -19,14 +19,17 @@ namespace MonoBehaviours
 
         public void OnPlayerDeath()
         {
+            health.HideHealthBar();
             health.healthParent.transform.parent.gameObject.SetActive(false);
             inventoryUi.inventoryUi.transform.parent.gameObject.SetActive(false);
+            PlayerManager.instance.gameObject.SetActive(false);
         }
 
         public void OnRestart()
         {
             health.healthParent.transform.parent.gameObject.SetActive(true);
             inventoryUi.inventoryUi.transform.parent.gameObject.SetActive(true);
+            PlayerManager.instance.gameObject.SetActive(true);
             inventoryUi.ResetUi();
             PlayerState.ResetState();
         }

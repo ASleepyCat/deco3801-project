@@ -150,7 +150,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9732f494ce582942a7c241af2d174db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  diagUI: {fileID: 0}
   inTrigger: {fileID: 805732558474303749}
 --- !u!114 &805732558474303749
 MonoBehaviour:
@@ -174,11 +173,25 @@ MonoBehaviour:
   - Example4_dialogue
   - Item_LookUp
   - Laura
+  - Leve1Scene1
+  - Level1Advisor
+  - Level1Advisor2
   - Level1Bucky
   - Level1Council
+  - Level1Council2
+  - Level1Elizabeth
   - Level1Lieutenant
+  - Level1Lieutenant2
   - Level1Scence1
   - Level1Scene2
+  - Level1Scroll
+  - Level2Advisor
+  - Level2Councilman
+  - Level2Doctor
+  - Level2Elizabeth
+  - Level2Lieutenant
+  - Level2Scene1
+  - Level2Solider
   - MrCube
   - NPCOnly
   - QuestChartDemo
@@ -190,7 +203,7 @@ MonoBehaviour:
   interactionCount: 0
   alias: 
   overrideStartNode: -1
-  defaultNPCSprite: {fileID: 21300000, guid: aed25b998a366d044b7fc76229795ff4, type: 3}
+  defaultNPCSprite: {fileID: 8058879627694289943, guid: 0a00aa4a6b5e3e84a8b489a44d7f92bf, type: 3}
   defaultPlayerSprite: {fileID: 21300000, guid: f3aefee2fd407a14b8a512455752576c, type: 3}
   targetManager: {fileID: 0}
   preload: 0

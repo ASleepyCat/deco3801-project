@@ -5,22 +5,22 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Main.unity
     guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/GameOver.unity
     guid: aca9cb97465de7447ba407edde5368eb
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Template/PrinceRoomScene.unity
     guid: ee3875b7732f5b74faca7a85d440d07e
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Template/BuckyRoom.unity
     guid: aef8b669383b29a488ede941cf36c401
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Template/CastleMap_Prince.unity
     guid: 54a92e1dee3c116468ac4cebf442d5f7
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Template/CouncilRoom.unity
     guid: 96d99c23f144bda439d8c2f930856ad9
   - enabled: 1

@@ -22,6 +22,7 @@ public class UIManager2 : MonoBehaviour {
         //VD.LoadDialogues(); //Load all dialogues to memory so that we dont spend time doing so later
         NPCContainer.SetActive(false);
         PlayerContainer.SetActive(false);
+       
     }
 
     // Start is called before the first frame update
@@ -34,10 +35,11 @@ public class UIManager2 : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        var data = VD.nodeData;
+        
 
         if (VD.isActive)
         {
+            var data = VD.nodeData;
             if (!data.pausedAction && data.isPlayer)
             {
                 if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow))

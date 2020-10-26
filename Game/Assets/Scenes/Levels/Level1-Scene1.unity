@@ -1603,7 +1603,7 @@ GameObject:
   - component: {fileID: 715132967}
   - component: {fileID: 715132966}
   m_Layer: 0
-  m_Name: Council 2
+  m_Name: Bucky
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

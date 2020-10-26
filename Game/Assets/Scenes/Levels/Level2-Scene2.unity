@@ -13936,17 +13936,6 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
---- !u!114 &706868077 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8444243490116600010, guid: 6b9f18e6c3eb5f54abb9077e1a1b01b2, type: 3}
-  m_PrefabInstance: {fileID: 1994164819}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4b8b99d8a12e39e4b94d2d7162c7c978, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &752867178
 GameObject:
   m_ObjectHideFlags: 0
@@ -26215,6 +26204,73 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &1608492343 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4953334142017493048, guid: 6b9f18e6c3eb5f54abb9077e1a1b01b2, type: 3}
+  m_PrefabInstance: {fileID: 1994164819}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1608492344
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1608492343}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b8b99d8a12e39e4b94d2d7162c7c978, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  diags:
+  - Charlie
+  - CommentModifier
+  - CrazyCap
+  - DEMO_Condition
+  - demo_Narration
+  - Example3Dialogue
+  - Example4_dialogue
+  - Item_LookUp
+  - Laura
+  - Leve1Scene1
+  - Level1Advisor
+  - Level1Advisor2
+  - Level1Bucky
+  - Level1Council
+  - Level1Council2
+  - Level1Elizabeth
+  - Level1Lieutenant
+  - Level1Lieutenant2
+  - Level1Scence1
+  - Level1Scene2
+  - Level1Scroll
+  - Level2Advisor
+  - Level2Councilman
+  - Level2Doctor
+  - Level2Elizabeth
+  - Level2Lieutenant
+  - Level2Scene1
+  - Level2Solider
+  - MrCube
+  - NPCOnly
+  - QuestChartDemo
+  - TriggeredDude
+  - Witch
+  assignedIndex: 22
+  assignedID: 58286
+  assignedDialogue: Level2Councilman
+  interactionCount: 0
+  alias: 
+  overrideStartNode: -1
+  defaultNPCSprite: {fileID: 3929453942698372637, guid: 0a00aa4a6b5e3e84a8b489a44d7f92bf, type: 3}
+  defaultPlayerSprite: {fileID: 21300000, guid: f0a0af7e3261f4a4ea913148af11e21b, type: 3}
+  targetManager: {fileID: 0}
+  preload: 0
+  notuptodate: 0
+  startp: 0
+  loadtag: 
+  langs: []
+  S_playerDiags: []
+  S_actionNodes: []
 --- !u!1 &1623452100
 GameObject:
   m_ObjectHideFlags: 0
@@ -34999,7 +35055,7 @@ PrefabInstance:
     - target: {fileID: 4953334142017493043, guid: 6b9f18e6c3eb5f54abb9077e1a1b01b2, type: 3}
       propertyPath: inTrigger
       value: 
-      objectReference: {fileID: 706868077}
+      objectReference: {fileID: 1608492344}
     - target: {fileID: 4953334142017493048, guid: 6b9f18e6c3eb5f54abb9077e1a1b01b2, type: 3}
       propertyPath: m_Name
       value: council_2
@@ -35112,7 +35168,8 @@ PrefabInstance:
       propertyPath: defaultPlayerSprite
       value: 
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8444243490116600010, guid: 6b9f18e6c3eb5f54abb9077e1a1b01b2, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 6b9f18e6c3eb5f54abb9077e1a1b01b2, type: 3}
 --- !u!1 &1994735382
 GameObject:

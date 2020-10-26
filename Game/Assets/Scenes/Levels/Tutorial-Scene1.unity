@@ -1042,13 +1042,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 8148057894507449652, guid: b51043fe3a5af0a498dd5da397f4f2fb, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -195.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8148057894507449652, guid: b51043fe3a5af0a498dd5da397f4f2fb, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 1.2
+    - target: {fileID: 8148057894507449659, guid: b51043fe3a5af0a498dd5da397f4f2fb, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8148057894797972881, guid: b51043fe3a5af0a498dd5da397f4f2fb, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1138,13 +1134,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: Dialogue
       objectReference: {fileID: 0}
-    - target: {fileID: 8148057895377545027, guid: b51043fe3a5af0a498dd5da397f4f2fb, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -195
+    - target: {fileID: 8148057894797972885, guid: b51043fe3a5af0a498dd5da397f4f2fb, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 8148057895377545027, guid: b51043fe3a5af0a498dd5da397f4f2fb, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 1.4001
+    - target: {fileID: 8148057895377545026, guid: b51043fe3a5af0a498dd5da397f4f2fb, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b51043fe3a5af0a498dd5da397f4f2fb, type: 3}
@@ -2240,16 +2236,32 @@ MonoBehaviour:
   - Example4_dialogue
   - Item_LookUp
   - Laura
+  - Leve1Scene1
+  - Level1Advisor
+  - Level1Advisor2
   - Level1Bucky
   - Level1Council
+  - Level1Council2
+  - Level1Elizabeth
   - Level1Lieutenant
+  - Level1Lieutenant2
   - Level1Scence1
+  - Level1Scene2
+  - Level1Scroll
+  - Level2
+  - Level2Advisor
+  - Level2Councilman
+  - Level2Doctor
+  - Level2Elizabeth
+  - Level2Lieutenant
+  - Level2Scene1
+  - Level2Solider
   - MrCube
   - NPCOnly
   - QuestChartDemo
   - TriggeredDude
   - Witch
-  assignedIndex: 12
+  assignedIndex: 18
   assignedID: 75925
   assignedDialogue: Level1Scence1
   interactionCount: 0

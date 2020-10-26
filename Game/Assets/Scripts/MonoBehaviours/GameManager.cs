@@ -10,7 +10,7 @@ namespace MonoBehaviours
     {
         public static GameManager Instance;
         public UIManager2 dialogue;
-        public string restartLevel = "PrinceRoomScene";
+        public string restartLevel = "Scene/Tutorial-Scene1";
         public PlayerHealthBar health;
         public InventoryUi inventoryUi;
         public PlayerState PlayerState { get; private set; }
@@ -34,14 +34,13 @@ namespace MonoBehaviours
         public void PlayAnimation()
         {
             VD.Next();
-            director.Play();
+            GameObject.Find("TimelineManager").GetComponent<TimelineManager>().director.Play();
         }
 
         public void LoadNextScene(string sceneName)
         {
             SceneManager.LoadScene(sceneName, LoadSceneMode.Single);
         }
-
 
         private void Awake()
         {

@@ -7,7 +7,7 @@ namespace MonoBehaviours
     {
         public void LoadScene()
         {
-            SceneManager.LoadScene(GameManager.Instance.restartLevel);
+            SceneManager.LoadScene("Tutorial-Scene1");
             GameManager.Instance.OnRestart();
         }
     }

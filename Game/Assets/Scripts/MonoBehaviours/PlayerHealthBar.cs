@@ -18,6 +18,12 @@ namespace MonoBehaviours
         private readonly Vector2 _show = new Vector2(698.5f, -33.5f);
         private const float Speed = 893 - 698.5f; // Move health bar in one second
 
+        public void HideHealthBar()
+        {
+            _uiRectTransform.anchoredPosition = _hide;
+            showHealth = false;
+        }
+
         private void Start()
         {
             if (GameManager.Instance.health != null)
@@ -52,7 +58,7 @@ namespace MonoBehaviours
             if (_health.IsGameOver())
             {
                 GameManager.Instance.OnPlayerDeath();
-                SceneManager.LoadScene("GameOver");   
+                SceneManager.LoadScene("GameOver");
             }
         }
 
@@ -63,6 +69,21 @@ namespace MonoBehaviours
             _health.health = 3;
             foreach (var health in _points)
                 health.enabled = true;
+        }
+
+        public void showPlayerHealth()
+        {
+            showHealth = true;
+        }
+
+        public void reducePlayerHealth()
+        {
+            _health.DecrementHealth();
+        }
+
+        public void hidePlayerHealth()
+        {
+            showHealth = false;
         }
     }
 }

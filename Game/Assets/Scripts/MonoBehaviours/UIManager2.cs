@@ -14,8 +14,10 @@ namespace MonoBehaviours
         public Text[] TextChoices;
         public Image NPCSprite;
         public Image PlayerSprite;
-        
+        public AudioSource audioSource;
+
         private GameManager _gameManager;
+
 
         private void Awake()
         {
@@ -111,6 +113,12 @@ namespace MonoBehaviours
                         TextChoices[i].transform.parent.gameObject.SetActive(false);
                 }
                 TextChoices[0].transform.parent.GetComponent<Button>().Select();
+                // Play Audio if any
+                if (data.audios[data.commentIndex] != null)
+                {
+                    audioSource.clip = data.audios[data.commentIndex];
+                    audioSource.Play();
+                }
             } else
             {
                 //Set node sprite if there's any, otherwise try to use default sprite
@@ -136,6 +144,12 @@ namespace MonoBehaviours
 
                 NPCContainer.SetActive(true);
                 NPCText.text = data.comments[data.commentIndex];
+                // Play Audio if any
+                if (data.audios[data.commentIndex] != null)
+                {
+                    audioSource.clip = data.audios[data.commentIndex];
+                    audioSource.Play();
+                }
             }
         }
 

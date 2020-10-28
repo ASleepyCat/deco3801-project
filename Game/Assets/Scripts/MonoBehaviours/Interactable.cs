@@ -1,14 +1,10 @@
 ﻿using ScriptableObjects;
 using UnityEngine;
-using VIDE_Data;
 
 namespace MonoBehaviours
 {
     public class Interactable : MonoBehaviour
     {
-        //Reference to our diagUI script for quick access
-        public UIManager diagUI;
-
         //Stored current VA when inside a trigger
         public VIDE_Assign inTrigger;
         private GameManager _gameManager;
@@ -37,11 +33,10 @@ namespace MonoBehaviours
         {
             Debug.Log("interact");
             // Return if player is already busy
-
+   
             if (!_gameManager.PlayerState.SetPlayerState(PlayerState.States.InDialogue)) return;
-            diagUI.Interact(inTrigger);
-            _gameManager.PlayerState.SetPlayerState(PlayerState.States.Free);
-            ;
+            UIManager2.Instance.Interact(inTrigger);
+            //_gameManager.PlayerState.SetPlayerState(PlayerState.States.Free);
         }
     }
 }

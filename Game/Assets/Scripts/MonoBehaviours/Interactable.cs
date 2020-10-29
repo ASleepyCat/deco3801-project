@@ -5,7 +5,6 @@ namespace MonoBehaviours
 {
     public class Interactable : MonoBehaviour
     {
-        public BoxCollider2D trigger;
         public Item item;
         public VIDE_Assign inTrigger; // Stored current VA when inside a trigger
 
@@ -34,7 +33,7 @@ namespace MonoBehaviours
             if (item != null)
             {
                 GameManager.Instance.inventory.AddItem(item);
-                trigger.isTrigger = false;
+                gameObject.SetActive(false);
             }
             //_gameManager.PlayerState.SetPlayerState(PlayerState.States.Free);
         }

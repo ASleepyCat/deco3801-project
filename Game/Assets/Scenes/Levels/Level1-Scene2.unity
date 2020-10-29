@@ -19988,7 +19988,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9732f494ce582942a7c241af2d174db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trigger: {fileID: 1337943146}
   item: {fileID: 11400000, guid: eda22a64935e0304fb9db0ca86307d55, type: 2}
   inTrigger: {fileID: 1337943142}
 --- !u!212 &1337943144
@@ -27636,7 +27635,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9732f494ce582942a7c241af2d174db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trigger: {fileID: 0}
   item: {fileID: 0}
   inTrigger: {fileID: 1665427301}
 --- !u!114 &1665427301

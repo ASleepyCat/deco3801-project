@@ -4,16 +4,16 @@ namespace MonoBehaviours
 {
     public class PlayerManager : MonoBehaviour
     {
-        public static PlayerManager instance;
+        public static PlayerManager Instance;
 
         private void Awake()
         {
-            if (instance != null)
+            if (Instance != null)
             {
                 Debug.LogWarning("More than one instance of " + GetType().Name + " found!");
                 return;
             }
-            instance = this;
+            Instance = this;
         }
     }
 }

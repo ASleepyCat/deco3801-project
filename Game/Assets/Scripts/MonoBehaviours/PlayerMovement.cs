@@ -18,7 +18,7 @@ namespace MonoBehaviours
 
         private void Awake()
         {
-            _manager = PlayerManager.instance;
+            _manager = PlayerManager.Instance;
             if (!_playerExist)
             {
                 _playerExist = true;

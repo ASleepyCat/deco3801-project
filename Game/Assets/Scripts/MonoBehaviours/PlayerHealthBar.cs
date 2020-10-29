@@ -71,17 +71,17 @@ namespace MonoBehaviours
                 health.enabled = true;
         }
 
-        public void showPlayerHealth()
+        public void ShowPlayerHealth()
         {
             showHealth = true;
         }
 
-        public void reducePlayerHealth()
+        public void ReducePlayerHealth()
         {
             _health.DecrementHealth();
         }
 
-        public void hidePlayerHealth()
+        public void HidePlayerHealth()
         {
             showHealth = false;
         }

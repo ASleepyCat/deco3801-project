@@ -43,27 +43,72 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 268dc70b105993846a123be43345df63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fileIndex: 20
+  fileIndex: 11
   skinIndex: 0
   loadTag: 
   startID: 0
   curFocusID: 0
-  currentID: 23214
+  currentID: 20257
   autosave: 1
   previewPanning: 0
-  currentDiag: 20
+  currentDiag: 11
   locEdit: 0
   pNodeID: 18
   aNodeID: 2
   S_playerDiags:
   - commentCount: 1
     s_comment:
-    - text: "\u201CDear Bucky,\r\nWe\u2019ll be meeting at your house tonight.\r\nRegards,\r\nV\u201D\r\n"
+    - text: Ah, you majesty. Do you have enough information
       extraData: ExtraData
       inputSetIndex: 0
+      outputNodeIndex: 1
+      outActionIndex: -1
+      showmore: 1
+      outRect:
+        serializedVersion: 2
+        x: 301
+        y: 63
+        width: 30
+        height: 33
+      sprites: {fileID: 0}
+      audios: {fileID: 8300000, guid: a0e445165a26cbd4f810ee63a9462551, type: 3}
+      visible: 1
+    ID: 0
+    rect:
+      serializedVersion: 2
+      x: -270
+      y: -80
+      width: 348
+      height: 168
+    pTag: 
+    expand: 0
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 0
+  - commentCount: 2
+    s_comment:
+    - text: Yes I do!
+      extraData: ExtraData
+      inputSetIndex: 1
+      outputNodeIndex: -1
+      outActionIndex: 0
+      showmore: 1
+      outRect:
+        serializedVersion: 2
+        x: 301
+        y: 63
+        width: 30
+        height: 23
+      sprites: {fileID: 0}
+      audios: {fileID: 8300000, guid: a0e445165a26cbd4f810ee63a9462551, type: 3}
+      visible: 1
+    - text: No I need to get more...
+      extraData: ExtraData
+      inputSetIndex: 1
       outputNodeIndex: -1
       outActionIndex: -1
-      showmore: 0
+      showmore: 1
       outRect:
         serializedVersion: 2
         x: 0
@@ -71,20 +116,590 @@ MonoBehaviour:
         width: 0
         height: 0
       sprites: {fileID: 0}
-      audios: {fileID: 0}
+      audios: {fileID: 8300000, guid: a0e445165a26cbd4f810ee63a9462551, type: 3}
       visible: 1
-    ID: 0
+    ID: 1
     rect:
       serializedVersion: 2
-      x: -310
-      y: 30
+      x: 120
+      y: -70
       width: 348
-      height: 199.2
+      height: 211
+    pTag: 
+    expand: 0
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 1
+  - commentCount: 1
+    s_comment:
+    - text: Okay, so are we going to be invaded?
+      extraData: ExtraData
+      inputSetIndex: 2
+      outputNodeIndex: 3
+      outActionIndex: -1
+      showmore: 1
+      outRect:
+        serializedVersion: 2
+        x: 301
+        y: 63
+        width: 30
+        height: 33
+      sprites: {fileID: 0}
+      audios: {fileID: 8300000, guid: a0e445165a26cbd4f810ee63a9462551, type: 3}
+      visible: 1
+    ID: 2
+    rect:
+      serializedVersion: 2
+      x: 700
+      y: -80
+      width: 348
+      height: 168
     pTag: 
     expand: 0
     sprite: {fileID: 0}
     vars: []
     varKeys: []
     isPlayer: 0
-  S_actionNodes: []
+  - commentCount: 2
+    s_comment:
+    - text: Yes we are! Arm the troops
+      extraData: ExtraData
+      inputSetIndex: 3
+      outputNodeIndex: 4
+      outActionIndex: -1
+      showmore: 1
+      outRect:
+        serializedVersion: 2
+        x: 301
+        y: 63
+        width: 30
+        height: 23
+      sprites: {fileID: 0}
+      audios: {fileID: 8300000, guid: a0e445165a26cbd4f810ee63a9462551, type: 3}
+      visible: 1
+    - text: No we are not
+      extraData: ExtraData
+      inputSetIndex: 3
+      outputNodeIndex: 10
+      outActionIndex: -1
+      showmore: 1
+      outRect:
+        serializedVersion: 2
+        x: 300
+        y: 116
+        width: 30
+        height: 23
+      sprites: {fileID: 0}
+      audios: {fileID: 8300000, guid: a0e445165a26cbd4f810ee63a9462551, type: 3}
+      visible: 1
+    ID: 3
+    rect:
+      serializedVersion: 2
+      x: 940
+      y: -210
+      width: 348
+      height: 211
+    pTag: 
+    expand: 0
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 1
+  - commentCount: 1
+    s_comment:
+    - text: Did you find out from which direction? North or South?
+      extraData: ExtraData
+      inputSetIndex: 4
+      outputNodeIndex: 5
+      outActionIndex: -1
+      showmore: 1
+      outRect:
+        serializedVersion: 2
+        x: 301
+        y: 63
+        width: 30
+        height: 33
+      sprites: {fileID: 0}
+      audios: {fileID: 8300000, guid: a0e445165a26cbd4f810ee63a9462551, type: 3}
+      visible: 1
+    ID: 4
+    rect:
+      serializedVersion: 2
+      x: 1060
+      y: -310
+      width: 348
+      height: 168
+    pTag: 
+    expand: 0
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 0
+  - commentCount: 3
+    s_comment:
+    - text: They are coming from the North!
+      extraData: ExtraData
+      inputSetIndex: 5
+      outputNodeIndex: -1
+      outActionIndex: 1
+      showmore: 1
+      outRect:
+        serializedVersion: 2
+        x: 301
+        y: 63
+        width: 30
+        height: 23
+      sprites: {fileID: 0}
+      audios: {fileID: 8300000, guid: a0e445165a26cbd4f810ee63a9462551, type: 3}
+      visible: 1
+    - text: They are coming from the South!
+      extraData: ExtraData
+      inputSetIndex: 5
+      outputNodeIndex: -1
+      outActionIndex: 1
+      showmore: 1
+      outRect:
+        serializedVersion: 2
+        x: 300
+        y: 116
+        width: 30
+        height: 23
+      sprites: {fileID: 0}
+      audios: {fileID: 8300000, guid: a0e445165a26cbd4f810ee63a9462551, type: 3}
+      visible: 1
+    - text: Hmm... I think I need more information
+      extraData: ExtraData
+      inputSetIndex: 5
+      outputNodeIndex: -1
+      outActionIndex: -1
+      showmore: 1
+      outRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      sprites: {fileID: 0}
+      audios: {fileID: 8300000, guid: a0e445165a26cbd4f810ee63a9462551, type: 3}
+      visible: 1
+    ID: 5
+    rect:
+      serializedVersion: 2
+      x: 1660
+      y: -310
+      width: 348
+      height: 274
+    pTag: 
+    expand: 0
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 1
+  - commentCount: 1
+    s_comment:
+    - text: Then it appears Bucky has lied to us. We cannot trust any word from him.
+      extraData: ExtraData
+      inputSetIndex: 6
+      outputNodeIndex: -1
+      outActionIndex: 2
+      showmore: 1
+      outRect:
+        serializedVersion: 2
+        x: 301
+        y: 63
+        width: 30
+        height: 48
+      sprites: {fileID: 0}
+      audios: {fileID: 8300000, guid: a0e445165a26cbd4f810ee63a9462551, type: 3}
+      visible: 1
+    ID: 6
+    rect:
+      serializedVersion: 2
+      x: 1870
+      y: 80
+      width: 348
+      height: 183
+    pTag: 
+    expand: 0
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 0
+  - commentCount: 1
+    s_comment:
+    - text: 'Your majesty, our troops have already checked out both sides and there
+        is none there. '
+      extraData: ExtraData
+      inputSetIndex: 7
+      outputNodeIndex: 9
+      outActionIndex: -1
+      showmore: 1
+      outRect:
+        serializedVersion: 2
+        x: 301
+        y: 63
+        width: 30
+        height: 48
+      sprites: {fileID: 0}
+      audios: {fileID: 8300000, guid: a0e445165a26cbd4f810ee63a9462551, type: 3}
+      visible: 1
+    ID: 8
+    rect:
+      serializedVersion: 2
+      x: 2340
+      y: -300
+      width: 348
+      height: 183
+    pTag: 
+    expand: 0
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 0
+  - commentCount: 1
+    s_comment:
+    - text: "It appears Bucky lied; we can\u2019t trust him anymore\u2026"
+      extraData: ExtraData
+      inputSetIndex: 8
+      outputNodeIndex: -1
+      outActionIndex: 3
+      showmore: 1
+      outRect:
+        serializedVersion: 2
+        x: 301
+        y: 63
+        width: 30
+        height: 33
+      sprites: {fileID: 0}
+      audios: {fileID: 8300000, guid: a0e445165a26cbd4f810ee63a9462551, type: 3}
+      visible: 1
+    ID: 9
+    rect:
+      serializedVersion: 2
+      x: 3080
+      y: -280
+      width: 348
+      height: 168
+    pTag: 
+    expand: 0
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 0
+  - commentCount: 1
+    s_comment:
+    - text: "Our troops are unhappy and felt like you\u2019ve wasted their time\u2026"
+      extraData: ExtraData
+      inputSetIndex: 9
+      outputNodeIndex: 8
+      outActionIndex: -1
+      showmore: 1
+      outRect:
+        serializedVersion: 2
+        x: 301
+        y: 63
+        width: 30
+        height: 33
+      sprites: {fileID: 0}
+      audios: {fileID: 8300000, guid: a0e445165a26cbd4f810ee63a9462551, type: 3}
+      visible: 1
+    ID: 11
+    rect:
+      serializedVersion: 2
+      x: 2710
+      y: -280
+      width: 348
+      height: 168
+    pTag: 
+    expand: 0
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 0
+  - commentCount: 1
+    s_comment:
+    - text: Very good Sir, this has been confirmed by our soliders!
+      extraData: ExtraData
+      inputSetIndex: 10
+      outputNodeIndex: 11
+      outActionIndex: -1
+      showmore: 1
+      outRect:
+        serializedVersion: 2
+        x: 301
+        y: 63
+        width: 30
+        height: 33
+      sprites: {fileID: 0}
+      audios: {fileID: 8300000, guid: a0e445165a26cbd4f810ee63a9462551, type: 3}
+      visible: 1
+    ID: 14
+    rect:
+      serializedVersion: 2
+      x: 1150
+      y: -80
+      width: 348
+      height: 168
+    pTag: 
+    expand: 0
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 0
+  - commentCount: 1
+    s_comment:
+    - text: They are impressed with your reasoning and ability to filter misinformation
+      extraData: ExtraData
+      inputSetIndex: 11
+      outputNodeIndex: 6
+      outActionIndex: -1
+      showmore: 1
+      outRect:
+        serializedVersion: 2
+        x: 301
+        y: 63
+        width: 30
+        height: 48
+      sprites: {fileID: 0}
+      audios: {fileID: 8300000, guid: a0e445165a26cbd4f810ee63a9462551, type: 3}
+      visible: 1
+    ID: 15
+    rect:
+      serializedVersion: 2
+      x: 1530
+      y: 0
+      width: 348
+      height: 183
+    pTag: 
+    expand: 0
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 0
+  S_actionNodes:
+  - pauseHere: 0
+    gameObjectName: HealthCanvas
+    methodName: showPlayerHealth
+    nameIndex: 4
+    methodIndex: 1
+    paramIndex: 0
+    opts:
+    - '[No method]'
+    - showPlayerHealth
+    - reducePlayerHealth
+    - hidePlayerHealth
+    nameOpts:
+    - '[No object]'
+    - Advisor
+    - GameManager
+    - HealthParent
+    - HealthCanvas
+    - InventoryCanvas
+    - TimelineManager
+    param_bool: 0
+    param_string: 
+    param_int: 0
+    param_float: 0
+    rect:
+      serializedVersion: 2
+      x: 480
+      y: -80
+      width: 200
+      height: 170
+    ID: 7
+    outPlayerIndex: 2
+    outActionIndex: -1
+    more: 0
+    ovrStartNode: -1
+    renameDialogue: 
+  - pauseHere: 0
+    gameObjectName: HealthCanvas
+    methodName: reducePlayerHealth
+    nameIndex: 7
+    methodIndex: 2
+    paramIndex: 0
+    opts:
+    - '[No method]'
+    - showPlayerHealth
+    - reducePlayerHealth
+    - hidePlayerHealth
+    nameOpts:
+    - '[No object]'
+    - Bucky
+    - Advisor
+    - council_2
+    - Head Soldier
+    - GameManager
+    - HealthParent
+    - HealthCanvas
+    - InventoryCanvas
+    param_bool: 0
+    param_string: 
+    param_int: 0
+    param_float: 0
+    rect:
+      serializedVersion: 2
+      x: 2080
+      y: -320
+      width: 200
+      height: 170
+    ID: 10
+    outPlayerIndex: 7
+    outActionIndex: -1
+    more: 0
+    ovrStartNode: -1
+    renameDialogue: 
+  - pauseHere: 0
+    gameObjectName: HealthCanvas
+    methodName: hidePlayerHealth
+    nameIndex: 7
+    methodIndex: 3
+    paramIndex: 0
+    opts:
+    - '[No method]'
+    - showPlayerHealth
+    - reducePlayerHealth
+    - hidePlayerHealth
+    nameOpts:
+    - '[No object]'
+    - Bucky
+    - Advisor
+    - council_2
+    - Head Soldier
+    - GameManager
+    - HealthParent
+    - HealthCanvas
+    - InventoryCanvas
+    param_bool: 0
+    param_string: 
+    param_int: 0
+    param_float: 0
+    rect:
+      serializedVersion: 2
+      x: 2300
+      y: 130
+      width: 200
+      height: 170
+    ID: 13
+    outPlayerIndex: -1
+    outActionIndex: 5
+    more: 0
+    ovrStartNode: -1
+    renameDialogue: 
+  - pauseHere: 0
+    gameObjectName: HealthCanvas
+    methodName: hidePlayerHealth
+    nameIndex: 7
+    methodIndex: 3
+    paramIndex: 0
+    opts:
+    - '[No method]'
+    - showPlayerHealth
+    - reducePlayerHealth
+    - hidePlayerHealth
+    nameOpts:
+    - '[No object]'
+    - Bucky
+    - Advisor
+    - council_2
+    - Head Soldier
+    - GameManager
+    - HealthParent
+    - HealthCanvas
+    - InventoryCanvas
+    param_bool: 0
+    param_string: 
+    param_int: 0
+    param_float: 0
+    rect:
+      serializedVersion: 2
+      x: 3440
+      y: -290
+      width: 200
+      height: 170
+    ID: 17
+    outPlayerIndex: -1
+    outActionIndex: 4
+    more: 0
+    ovrStartNode: -1
+    renameDialogue: 
+  - pauseHere: 0
+    gameObjectName: GameManager
+    methodName: LoadNextScene
+    nameIndex: 2
+    methodIndex: 5
+    paramIndex: 2
+    opts:
+    - '[No method]'
+    - get_PlayerState
+    - OnPlayerDeath
+    - OnRestart
+    - PlayAnimation
+    - LoadNextScene
+    - SetPlayerChoice
+    nameOpts:
+    - '[No object]'
+    - Advisor
+    - GameManager
+    - HealthParent
+    - HealthCanvas
+    - InventoryCanvas
+    - TimelineManager
+    - King
+    param_bool: 0
+    param_string: Level2-Scene1
+    param_int: 0
+    param_float: 0
+    rect:
+      serializedVersion: 2
+      x: 3700
+      y: -240
+      width: 200
+      height: 190
+    ID: 16
+    outPlayerIndex: -1
+    outActionIndex: -1
+    more: 0
+    ovrStartNode: -1
+    renameDialogue: 
+  - pauseHere: 0
+    gameObjectName: GameManager
+    methodName: LoadNextScene
+    nameIndex: 2
+    methodIndex: 5
+    paramIndex: 2
+    opts:
+    - '[No method]'
+    - get_PlayerState
+    - OnPlayerDeath
+    - OnRestart
+    - PlayAnimation
+    - LoadNextScene
+    - SetPlayerChoice
+    nameOpts:
+    - '[No object]'
+    - Advisor
+    - GameManager
+    - HealthParent
+    - HealthCanvas
+    - InventoryCanvas
+    - TimelineManager
+    - King
+    param_bool: 0
+    param_string: Level2-Scene1
+    param_int: 0
+    param_float: 0
+    rect:
+      serializedVersion: 2
+      x: 2520
+      y: 120
+      width: 200
+      height: 190
+    ID: 18
+    outPlayerIndex: -1
+    outActionIndex: -1
+    more: 0
+    ovrStartNode: -1
+    renameDialogue: 
   S_selNodes: []

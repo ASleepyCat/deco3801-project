@@ -5,10 +5,9 @@ namespace MonoBehaviours
 {
     public class Interactable : MonoBehaviour
     {
-        //Stored current VA when inside a trigger
         public BoxCollider2D trigger;
         public Item item;
-        public VIDE_Assign inTrigger;
+        public VIDE_Assign inTrigger; // Stored current VA when inside a trigger
 
         private GameManager _gameManager;
 
@@ -20,13 +19,7 @@ namespace MonoBehaviours
         private void OnTriggerStay2D(Collider2D other)
         {
             if (other.CompareTag("Player") && Input.GetButton("Interact"))
-            {
-                /*if (other.GetComponent<VIDE_Assign>() != null)
-                {
-                    inTrigger = other.GetComponent<VIDE_Assign>();
-                }*/
                 InvokeEvent();
-            }      
         }
 
         /// <summary>
@@ -36,7 +29,6 @@ namespace MonoBehaviours
         {
             Debug.Log("interact");
             // Return if player is already busy
-   
             if (!_gameManager.PlayerState.SetPlayerState(PlayerState.States.InDialogue)) return;
             UIManager2.Instance.Interact(inTrigger);
             if (item != null)

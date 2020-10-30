@@ -22,3 +22,9 @@ git clone https://github.com/ASleepyCat/deco3801-project.git
 Tilesets used for game maps:  
 Zabin, Hyptosis, and Danial Cook. https://opengameart.org/content/castle-tiles-for-rpgs  
 [[LPC] City inside](https://opengameart.org/content/lpc-city-inside)
+
+# Controls
+W/A/S/D - move up/left/down/right respectively  
+E - interact with objects/NPCs  
+Tab - open/close inventory  
+Enter - progress dialogue  

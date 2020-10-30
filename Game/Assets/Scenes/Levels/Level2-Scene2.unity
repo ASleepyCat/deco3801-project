@@ -23308,6 +23308,7 @@ MonoBehaviour:
   - Level2Scene1
   - Level2Solider
   - MrCube
+  - MyDialogue
   - NPCOnly
   - QuestChartDemo
   - TriggeredDude
@@ -23419,7 +23420,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 11
+  m_SortingOrder: 9
   m_Sprite: {fileID: -5540648042656198855, guid: 0a00aa4a6b5e3e84a8b489a44d7f92bf, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -23751,7 +23752,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 11
+  m_SortingOrder: 9
   m_Sprite: {fileID: 21300000, guid: 7962d291604bd88459e8b53ca8453093, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -23811,7 +23812,6 @@ MonoBehaviour:
   - Level1Scence1
   - Level1Scene2
   - Level1Scroll
-  - Level2
   - Level2Advisor
   - Level2Councilman
   - Level2Doctor
@@ -23820,11 +23820,12 @@ MonoBehaviour:
   - Level2Scene1
   - Level2Solider
   - MrCube
+  - MyDialogue
   - NPCOnly
   - QuestChartDemo
   - TriggeredDude
   - Witch
-  assignedIndex: 28
+  assignedIndex: 27
   assignedID: 16517
   assignedDialogue: Level2Solider
   interactionCount: 0
@@ -26327,6 +26328,7 @@ MonoBehaviour:
   - Level2Scene1
   - Level2Solider
   - MrCube
+  - MyDialogue
   - NPCOnly
   - QuestChartDemo
   - TriggeredDude
@@ -27669,7 +27671,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 11
+  m_SortingOrder: 9
   m_Sprite: {fileID: -2764029711273647405, guid: 0a00aa4a6b5e3e84a8b489a44d7f92bf, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -27751,6 +27753,7 @@ MonoBehaviour:
   - Level2Scene1
   - Level2Solider
   - MrCube
+  - MyDialogue
   - NPCOnly
   - QuestChartDemo
   - TriggeredDude
@@ -32876,6 +32879,10 @@ PrefabInstance:
       propertyPath: inTrigger
       value: 
       objectReference: {fileID: 1957297578}
+    - target: {fileID: 6431587057990737264, guid: ca9d5349e27b2104ba1fe8cb090660fe, type: 3}
+      propertyPath: m_SortingOrder
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 6431587057990737265, guid: ca9d5349e27b2104ba1fe8cb090660fe, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.4459834

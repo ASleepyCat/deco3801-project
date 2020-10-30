@@ -20,7 +20,12 @@ namespace MonoBehaviours
         {
             inventoryUi.SetActive(false);
             foreach (var slot in _slots)
+            {
                 slot.ClearSlot();
+                slot.GetComponentInChildren<Button>().onClick.RemoveAllListeners();
+            }
+
+            itemDescription.text = "";
         }
         
         private void Start()

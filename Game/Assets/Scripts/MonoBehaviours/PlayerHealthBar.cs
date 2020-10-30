@@ -18,6 +18,9 @@ namespace MonoBehaviours
         private readonly Vector2 _show = new Vector2(698.5f, -33.5f);
         private const float Speed = 893 - 698.5f; // Move health bar in one second
 
+        /// <summary>
+        /// Used to reset the position of the health bar on game over.
+        /// </summary>
         public void HideHealthBar()
         {
             _uiRectTransform.anchoredPosition = _hide;
@@ -45,6 +48,9 @@ namespace MonoBehaviours
             MoveHealthBar();
         }
 
+        /// <summary>
+        /// Moves the position of the health bar's UI element.
+        /// </summary>
         private void MoveHealthBar()
         {
             var position = showHealth ? _show : _hide;
@@ -52,6 +58,10 @@ namespace MonoBehaviours
                 position, Speed * Time.deltaTime);
         }
 
+        /// <summary>
+        /// Updates the health bar UI to hide a health point upon decrementing a health point.
+        /// Serves a callback from DecrementHealth().
+        /// </summary>
         private void UpdateHealth()
         {
             _points[_health.health].enabled = false;
@@ -62,6 +72,11 @@ namespace MonoBehaviours
             }
         }
 
+        /// <summary>
+        /// Used to reset health points and health bar when the player reloads from the game over screen.
+        /// </summary>
+        /// <param name="scene"></param>
+        /// <param name="mode"></param>
         private void ResetHealth(Scene scene, LoadSceneMode mode)
         {
             if (!_health.IsGameOver()) return;
@@ -71,17 +86,26 @@ namespace MonoBehaviours
                 health.enabled = true;
         }
 
-        public void showPlayerHealth()
+        /// <summary>
+        /// Wrapper for dialogue functionality.
+        /// </summary>
+        public void ShowPlayerHealth()
         {
             showHealth = true;
         }
 
-        public void reducePlayerHealth()
+        /// <summary>
+        /// Wrapper for dialogue functionality.
+        /// </summary>
+        public void ReducePlayerHealth()
         {
             _health.DecrementHealth();
         }
 
-        public void hidePlayerHealth()
+        /// <summary>
+        /// Wrapper for dialogue functionality.
+        /// </summary>
+        public void HidePlayerHealth()
         {
             showHealth = false;
         }
